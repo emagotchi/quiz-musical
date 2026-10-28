@@ -51,6 +51,6 @@ export interface ServerToClient {
   'room:state': (state: RoomState) => void;
 }
 
-export const ROUND_SECONDS = 60;
+export const ROUND_SECONDS = 90;
 export const REVEAL_SECONDS = 10;
 export const LOAD_TIMEOUT_SECONDS = 8;
