@@ -1,0 +1,1754 @@
+{
+  "id": "briceno",
+  "name": "Cristóbal Briceño",
+  "description": "Fother Muckers, Ases Falsos y solista",
+  "answerLabel": "canción",
+  "tracks": [
+    {
+      "id": "ases-falsos-misterios-del-peru",
+      "answer": "Misterios del Perú",
+      "aliases": [],
+      "youtubeId": "rSDPKHo2KCk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-salto-alto",
+      "answer": "Salto alto",
+      "aliases": [],
+      "youtubeId": "fLQZo06l6tw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-pacifico",
+      "answer": "Pacífico",
+      "aliases": [],
+      "youtubeId": "3Ymomeo_OsI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-septimo-cielo",
+      "answer": "Séptimo cielo",
+      "aliases": [],
+      "youtubeId": "PpYZ-26zWcA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-venir-es-facil",
+      "answer": "Venir es fácil",
+      "aliases": [],
+      "youtubeId": "4J1rPBNUQgI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-el-golfo-de-aden",
+      "answer": "El golfo de Adén",
+      "aliases": [],
+      "youtubeId": "oqGJaxZlOb8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-no-quiero-que-estes-conmigo",
+      "answer": "No quiero que estés conmigo",
+      "aliases": [],
+      "youtubeId": "IV4_Pvs9jVU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-fuerza-especial",
+      "answer": "Fuerza especial",
+      "aliases": [],
+      "youtubeId": "uQ_8p-qHL8U",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-manantial",
+      "answer": "Manantial",
+      "aliases": [],
+      "youtubeId": "ElDJ8yucc20",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-europa",
+      "answer": "Europa",
+      "aliases": [],
+      "youtubeId": "Lpr3weQD0zQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-la-flor-del-jazmin",
+      "answer": "La flor del jazmín",
+      "aliases": [],
+      "youtubeId": "0jy16zMY41k",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-aguanieve",
+      "answer": "Aguanieve",
+      "aliases": [],
+      "youtubeId": "sg0uEu7M2t8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-quemando",
+      "answer": "Quemando",
+      "aliases": [],
+      "youtubeId": "07_W4s4yYZU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-estudiar-y-trabajar",
+      "answer": "Estudiar y trabajar",
+      "aliases": [],
+      "youtubeId": "oB4pF2MGi98",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-la-sinceridad-del-cosmos",
+      "answer": "La sinceridad del cosmos",
+      "aliases": [],
+      "youtubeId": "jNu_GiWgvHc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Juventud Americana"
+        }
+      ],
+      "credit": "Ases Falsos — Juventud Americana"
+    },
+    {
+      "id": "ases-falsos-manten-la-conduccion",
+      "answer": "Mantén la conducción",
+      "aliases": [],
+      "youtubeId": "_9sz_96sO2c",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-la-gran-curva",
+      "answer": "La gran curva",
+      "aliases": [],
+      "youtubeId": "Mcva2pzSoMc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-placidamente",
+      "answer": "Plácidamente",
+      "aliases": [],
+      "youtubeId": "8OocA5VkncA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-cae-la-cortina",
+      "answer": "Cae la cortina",
+      "aliases": [],
+      "youtubeId": "2u-rgwhS2e4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-mi-ejercito",
+      "answer": "Mi ejército",
+      "aliases": [],
+      "youtubeId": "L3YxPQSV_Sk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-buscate-un-lugar-para-ensayar",
+      "answer": "Búscate un lugar para ensayar",
+      "aliases": [],
+      "youtubeId": "-RF-Do3GWgo",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-nada",
+      "answer": "Nada",
+      "aliases": [],
+      "youtubeId": "MHRrywv2xT0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-simetria",
+      "answer": "Simetría",
+      "aliases": [],
+      "youtubeId": "fVDDzUx7AfM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-nina-por-favor",
+      "answer": "Niña por favor",
+      "aliases": [],
+      "youtubeId": "sQJCTRkogzk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-tora-bora",
+      "answer": "Tora Bora",
+      "aliases": [],
+      "youtubeId": "QixZhpTaKPU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-ivanka",
+      "answer": "Ivanka",
+      "aliases": [],
+      "youtubeId": "Hju5GoSgg98",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-ya-no-quiero-volver",
+      "answer": "Ya no quiero volver",
+      "aliases": [],
+      "youtubeId": "xysCnCAjJ7o",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-al-borde-del-canon",
+      "answer": "Al borde del cañón",
+      "aliases": [],
+      "youtubeId": "VEmFCE77BQU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-una-estrella-que-se-mueve",
+      "answer": "Una estrella que se mueve",
+      "aliases": [],
+      "youtubeId": "pTRr9X8Ycv4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Conducción"
+        }
+      ],
+      "credit": "Ases Falsos — Conducción"
+    },
+    {
+      "id": "ases-falsos-chakras",
+      "answer": "Chakras",
+      "aliases": [],
+      "youtubeId": "JzJeOmFQFp0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-gehena",
+      "answer": "Gehena",
+      "aliases": [],
+      "youtubeId": "xfnPbH5qMtE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-sal-de-ahi",
+      "answer": "Sal de ahí",
+      "aliases": [],
+      "youtubeId": "3rX5KHYzp3E",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-subyugado",
+      "answer": "Subyugado",
+      "aliases": [],
+      "youtubeId": "0W3BXSLYeMA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-mas-se-fortalece",
+      "answer": "Más se fortalece",
+      "aliases": [],
+      "youtubeId": "nGbsIYUmPY0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-fria",
+      "answer": "Fría",
+      "aliases": [],
+      "youtubeId": "efCYo8c2-zg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-mucho-mas-mio",
+      "answer": "Mucho más mío",
+      "aliases": [],
+      "youtubeId": "VpgL7Z-DhA4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-antes-si-ahora-no",
+      "answer": "Antes sí ahora no",
+      "aliases": [],
+      "youtubeId": "0wBAtnvf3U0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-creo-que-no-creo",
+      "answer": "Creo que no creo",
+      "aliases": [],
+      "youtubeId": "LGQ2eyceM1Q",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-trato-hecho",
+      "answer": "Trato hecho",
+      "aliases": [],
+      "youtubeId": "mOQ3J8BVhm4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "El Hombre Puede"
+        }
+      ],
+      "credit": "Ases Falsos — El Hombre Puede"
+    },
+    {
+      "id": "ases-falsos-asi-es-como-termina",
+      "answer": "Así es como termina",
+      "aliases": [],
+      "youtubeId": "eNy1iDYxYms",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-el-viento-soplara",
+      "answer": "El viento soplará",
+      "aliases": [],
+      "youtubeId": "uN6cp3sebnw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-que-hara-de-mi",
+      "answer": "Qué hará de mí",
+      "aliases": [],
+      "youtubeId": "M7koh6HmLJY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-lucha-causa-problema",
+      "answer": "Lucha causa problema",
+      "aliases": [],
+      "youtubeId": "VO7Eu9cOLzQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-jhendelyn",
+      "answer": "Jhendelyn",
+      "aliases": [],
+      "youtubeId": "KELhFVVMwic",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-nace-un-contragolpe",
+      "answer": "Nace un contragolpe",
+      "aliases": [],
+      "youtubeId": "EJcbBlH6hiI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-peliculas",
+      "answer": "Películas",
+      "aliases": [],
+      "youtubeId": "THLDnHDvXNU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-mi-tribu",
+      "answer": "Mi tribu",
+      "aliases": [],
+      "youtubeId": "1GDpaGJUozU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-la-casa",
+      "answer": "La casa",
+      "aliases": [],
+      "youtubeId": "62k0n8VWhV8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-siempre-nueva",
+      "answer": "Siempre nueva",
+      "aliases": [],
+      "youtubeId": "SiF8G7aN-ik",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-88",
+      "answer": "88",
+      "aliases": [],
+      "youtubeId": "MhqF4443Mfk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-nada-me-debo",
+      "answer": "Nada me debo",
+      "aliases": [],
+      "youtubeId": "GchGzLm6XHw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-mala-fama",
+      "answer": "Mala fama",
+      "aliases": [],
+      "youtubeId": "IzdrsnkkwJI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Mala Fama"
+        }
+      ],
+      "credit": "Ases Falsos — Mala Fama"
+    },
+    {
+      "id": "ases-falsos-eres-una-bomba",
+      "answer": "Eres una bomba",
+      "aliases": [],
+      "youtubeId": "ZiKc0Mplfx4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-todo-pa-que",
+      "answer": "Todo pa qué",
+      "aliases": [],
+      "youtubeId": "BwUKrAkUabI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-nadie-nunca-nos-extrana",
+      "answer": "Nadie nunca nos extraña",
+      "aliases": [],
+      "youtubeId": "0vpEHocaY4c",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-como-quieres-que-no-me-enoje",
+      "answer": "Cómo quieres que no me enoje",
+      "aliases": [],
+      "youtubeId": "omDA_jz8-Iw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-otro-invierno-en-el-infierno",
+      "answer": "Otro invierno en el infierno",
+      "aliases": [],
+      "youtubeId": "uPUETT7iE5Y",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-noche-falsa",
+      "answer": "Noche falsa",
+      "aliases": [],
+      "youtubeId": "othCkb4_Zbg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-yo-si-estoy-en-guerra",
+      "answer": "Yo sí estoy en guerra",
+      "aliases": [],
+      "youtubeId": "E6Mb2XnTk_Q",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-tigre",
+      "answer": "Tigre",
+      "aliases": [],
+      "youtubeId": "8NhRjnSdbOc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "ases-falsos-la-lucha-diaria",
+      "answer": "La lucha diaria",
+      "aliases": [],
+      "youtubeId": "K0EJ7lCR-Lw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Ases Falsos"
+        },
+        {
+          "label": "Disco",
+          "value": "Tacto"
+        }
+      ],
+      "credit": "Ases Falsos — Tacto"
+    },
+    {
+      "id": "fother-muckers-fuerza-y-fortuna",
+      "answer": "Fuerza y fortuna",
+      "aliases": [],
+      "youtubeId": "0e8MYyVTAqk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-el-conductor",
+      "answer": "El conductor",
+      "aliases": [],
+      "youtubeId": "BYnmKAmkQo4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-tres-caras-largas",
+      "answer": "Tres caras largas",
+      "aliases": [],
+      "youtubeId": "aThL8fzSacs",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-el-que-se-lo-encuentra-se-lo-queda",
+      "answer": "El que se lo encuentra se lo queda",
+      "aliases": [],
+      "youtubeId": "mecNIr7sbuQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-aunque-todo-salio-mal",
+      "answer": "Aunque todo salió mal",
+      "aliases": [],
+      "youtubeId": "YAimsEb1IF0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-a-la-primera",
+      "answer": "A la primera",
+      "aliases": [],
+      "youtubeId": "_LNr3MeF4ZQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-uno-sino-mil",
+      "answer": "Uno sino mil",
+      "aliases": [],
+      "youtubeId": "TR6pcrFQbFY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-rios-color-invierno",
+      "answer": "Ríos color invierno",
+      "aliases": [],
+      "youtubeId": "-JZKrvs3o3g",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-fueron",
+      "answer": "Fueron",
+      "aliases": [],
+      "youtubeId": "pnDmxHLuoU0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-hector",
+      "answer": "Héctor",
+      "aliases": [],
+      "youtubeId": "sgHdzrXMUMc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-ya-veremos",
+      "answer": "Ya veremos",
+      "aliases": [],
+      "youtubeId": "3R0g_YbKeYo",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-cajas-y-paneles",
+      "answer": "Cajas y paneles",
+      "aliases": [],
+      "youtubeId": "VQTL108_F4g",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-tirado-al-sol",
+      "answer": "Tirado al sol",
+      "aliases": [],
+      "youtubeId": "FkVcm5iF_XM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-a-cuatro-rounds",
+      "answer": "A cuatro rounds",
+      "aliases": [],
+      "youtubeId": "4oal9KW4eFE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "No soy uno"
+        }
+      ],
+      "credit": "Fother Muckers — No soy uno"
+    },
+    {
+      "id": "fother-muckers-explorador",
+      "answer": "Explorador",
+      "aliases": [],
+      "youtubeId": "EBr02eEZgIA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-carta-a-mi-pais",
+      "answer": "Carta a mi país",
+      "aliases": [],
+      "youtubeId": "5SOQjX_BYRM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-viaje-de-regreso",
+      "answer": "Viaje de regreso",
+      "aliases": [],
+      "youtubeId": "utsuqeuK--s",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-monstruos-marinos",
+      "answer": "Monstruos marinos",
+      "aliases": [],
+      "youtubeId": "Nrej2NCFoFc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-la-tercera-via",
+      "answer": "La tercera vía",
+      "aliases": [],
+      "youtubeId": "10O6d1LSd8Q",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-justo-y-necesario",
+      "answer": "Justo y necesario",
+      "aliases": [],
+      "youtubeId": "I7c1q866wLU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-el-mismo-lado",
+      "answer": "El mismo lado",
+      "aliases": [],
+      "youtubeId": "SDLz8U7KOlo",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-bucaneros",
+      "answer": "Bucaneros",
+      "aliases": [],
+      "youtubeId": "UCxPMhoKMFA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-la-culebra-se-mata-por-la-cabeza",
+      "answer": "La culebra se mata por la cabeza",
+      "aliases": [],
+      "youtubeId": "PFM9h8xlHvM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-los-ases-falsos",
+      "answer": "Los ases falsos",
+      "aliases": [],
+      "youtubeId": "qkYN_Io4R0g",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-gran-puente",
+      "answer": "Gran puente",
+      "aliases": [],
+      "youtubeId": "qJUx3bTIrX0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-2022",
+      "answer": "2022",
+      "aliases": [],
+      "youtubeId": "2ucFZvux41U",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Justo y Necesario"
+        }
+      ],
+      "credit": "Fother Muckers — Justo y Necesario"
+    },
+    {
+      "id": "fother-muckers-nada-en-este-mundo",
+      "answer": "Nada en este mundo",
+      "aliases": [],
+      "youtubeId": "JRHd7_MzRJY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-llevame-a-mi-casa",
+      "answer": "Llévame a mi casa",
+      "aliases": [],
+      "youtubeId": "STt5V8NZofY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-en-mi-prime",
+      "answer": "En mi prime",
+      "aliases": [],
+      "youtubeId": "hzy7gimfAgg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-de-nuevo",
+      "answer": "De nuevo",
+      "aliases": [],
+      "youtubeId": "aCuc2Ry66ls",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-la-banda-que-me-gusta",
+      "answer": "La banda que me gusta",
+      "aliases": [],
+      "youtubeId": "pW-K-BOZu5s",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-mas-viejo-es-el-viento",
+      "answer": "Más viejo es el viento",
+      "aliases": [],
+      "youtubeId": "2aE9WWy860E",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-pino-no-es-caoba",
+      "answer": "Pino no es caoba",
+      "aliases": [],
+      "youtubeId": "ocBzVJUVwvI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-prehistoria",
+      "answer": "Prehistoria",
+      "aliases": [],
+      "youtubeId": "dj7CJ-_VgAE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-si-lo-quieres-de-verdad",
+      "answer": "Si lo quieres de verdad",
+      "aliases": [],
+      "youtubeId": "KoOgpueIoh4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    },
+    {
+      "id": "fother-muckers-en-el-infierno",
+      "answer": "En el infierno",
+      "aliases": [],
+      "youtubeId": "dLQqeXuAo2g",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Proyecto",
+          "value": "Fother Muckers"
+        },
+        {
+          "label": "Disco",
+          "value": "Así se Hace"
+        }
+      ],
+      "credit": "Fother Muckers — Así se Hace"
+    }
+  ]
+}
