@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Pack } from '../types';
-import type { JoinResult, PublicPlayer, RoomState } from '../shared/protocol';
+import type { ChatMessage, JoinResult, PublicPlayer, RoomState } from '../shared/protocol';
 import { PACKS, playableTracks } from '../data/packs';
 import { ATTEMPTS, ROUNDS_PER_GAME, chaosStart } from '../lib/scoring';
 import { playerKey, saveName, savedName, socket } from '../lib/socket';
 import { useClipPlayer } from '../lib/useClipPlayer';
 import { AttemptBar, Hints } from './AttemptBar';
+import { Chat, useChatMessages } from './Chat';
 import { GuessInput } from './GuessInput';
 
 interface Props {
@@ -21,6 +22,7 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
   const [error, setError] = useState('');
   const [session, setSession] = useState<{ roomId: string; playerId: string } | null>(null);
   const [state, setState] = useState<RoomState | null>(null);
+  const chat = useChatMessages();
 
   useEffect(() => {
     socket.on('room:state', setState);
@@ -73,10 +75,12 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
         state={state}
         pack={pack}
         me={session.playerId}
+        chat={chat.messages}
         onLeave={() => {
           socket.emit('room:leave');
           setSession(null);
           setState(null);
+          chat.clear();
           onExit();
         }}
       />
@@ -125,7 +129,15 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
   );
 }
 
-function Room({ state, pack, me, onLeave }: { state: RoomState; pack: Pack; me: string; onLeave: () => void }) {
+interface RoomProps {
+  state: RoomState;
+  pack: Pack;
+  me: string;
+  chat: ChatMessage[];
+  onLeave: () => void;
+}
+
+function Room({ state, pack, me, chat, onLeave }: RoomProps) {
   const isHost = state.hostId === me;
   const [rounds, setRounds] = useState(state.rounds);
   const [chaos, setChaos] = useState(state.chaos);
@@ -188,7 +200,10 @@ function Room({ state, pack, me, onLeave }: { state: RoomState; pack: Pack; me: 
           )}
         </div>
 
-        <Scoreboard state={state} me={me} />
+        <div className="room-side">
+          <Scoreboard state={state} me={me} />
+          <Chat messages={chat} me={me} />
+        </div>
       </div>
     </div>
   );

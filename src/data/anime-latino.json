@@ -6,22 +6,22 @@
   "guessPlaceholder": "Escribe el nombre del anime…",
   "tracks": [
     {
-      "id": "dragon-ball-z-opening",
+      "id": "dragon-ball-z-opening-2",
       "answer": "Dragon Ball Z",
       "aliases": [],
       "youtubeId": "bgYjEBOWTKQ",
-      "start": 0,
+      "start": 20,
       "hints": [
         {
           "label": "Tipo",
-          "value": "Opening"
+          "value": "Opening 2"
         },
         {
           "label": "Nombre",
-          "value": "D_____   B___   Z"
+          "value": "D_____   B___   _"
         }
       ],
-      "credit": "Dragon Ball Z — Opening"
+      "credit": "Dragon Ball Z — Opening 2"
     },
     {
       "id": "dragon-ball-opening",
@@ -72,10 +72,28 @@
         },
         {
           "label": "Nombre",
-          "value": "D_____   B___   Z"
+          "value": "D_____   B___   _"
         }
       ],
       "credit": "Dragon Ball Z — Ending"
+    },
+    {
+      "id": "dragon-ball-z-ending-2",
+      "answer": "Dragon Ball Z",
+      "aliases": [],
+      "youtubeId": "rvCvSjcYZEc",
+      "start": 1,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 2"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___   _"
+        }
+      ],
+      "credit": "Dragon Ball Z — Ending 2"
     },
     {
       "id": "dragon-ball-gt-opening",
@@ -90,7 +108,7 @@
         },
         {
           "label": "Nombre",
-          "value": "D_____   B___   G_"
+          "value": "D_____   B___   __"
         }
       ],
       "credit": "Dragon Ball GT — Opening"
@@ -108,7 +126,7 @@
         },
         {
           "label": "Nombre",
-          "value": "D_____   B___   G_"
+          "value": "D_____   B___   __"
         }
       ],
       "credit": "Dragon Ball GT — Ending"
@@ -207,8 +225,8 @@
       "id": "digimon-adventure-opening",
       "answer": "Digimon Adventure",
       "aliases": [],
-      "youtubeId": "LNHpNi47x7Q",
-      "start": 0,
+      "youtubeId": "EOuHn6eiyjI",
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -422,7 +440,7 @@
       "answer": "Marmalade Boy",
       "aliases": [],
       "youtubeId": "3dJyu7_I94c",
-      "start": 0,
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -875,7 +893,7 @@
       "answer": "Detective Conan",
       "aliases": [],
       "youtubeId": "08oedE10qI8",
-      "start": 0,
+      "start": 15,
       "hints": [
         {
           "label": "Tipo",

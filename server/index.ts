@@ -4,9 +4,10 @@ import { extname, join, normalize as normalizePath } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Server, type Socket } from 'socket.io';
 import { PACKS, playableTracks } from '../src/data/packs';
-import { ATTEMPTS, chaosSpots, isCorrect, pickTracks } from '../src/lib/scoring';
+import { ATTEMPTS, chaosSpots, isCorrect, normalize, pickTracks } from '../src/lib/scoring';
 import type { Pack, Track } from '../src/types';
 import {
+  CHAT_MAX_LENGTH,
   LOAD_TIMEOUT_SECONDS,
   REVEAL_SECONDS,
   ROUND_SECONDS,
@@ -28,6 +29,7 @@ interface Player {
   status: PlayerStatus;
   roundPoints: number;
   ready: boolean;
+  lastChatAt: number;
 }
 
 interface Room {
@@ -45,6 +47,8 @@ interface Room {
   endsAt: number | null;
   timer: NodeJS.Timeout | null;
   cleanup: NodeJS.Timeout | null;
+  /** Chat messages hidden during this round because they contain the answer. */
+  spoilers: { id: number; text: string }[];
 }
 
 type GameSocket = Socket<ClientToServer, ServerToClient, object, { roomId?: string; playerId?: string }>;
@@ -52,6 +56,8 @@ type GameSocket = Socket<ClientToServer, ServerToClient, object, { roomId?: stri
 const rooms = new Map<string, Room>();
 const MAX_ROUNDS = 30;
 const EMPTY_ROOM_TTL_MS = 5 * 60 * 1000;
+const CHAT_COOLDOWN_MS = 400;
+let chatId = 0;
 
 const randomId = (len: number, alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ') =>
   Array.from({ length: len }, () => alphabet[Math.floor(Math.random() * alphabet.length)]).join('');
@@ -134,9 +140,22 @@ function beginPlaying(room: Room) {
   broadcast(room);
 }
 
+/** True while the answer is still secret and the message names it (or one of its aliases). */
+function isSpoiler(room: Room, text: string) {
+  const track = room.queue[room.roundIndex];
+  if (!track || (room.phase !== 'loading' && room.phase !== 'playing')) return false;
+  const said = ` ${normalize(text)} `;
+  return [track.answer, ...(track.aliases ?? [])].some((a) => {
+    const name = normalize(a);
+    return name.length > 0 && said.includes(` ${name} `);
+  });
+}
+
 function endRound(room: Room) {
   if (room.phase !== 'playing') return;
   room.phase = 'reveal';
+  if (room.spoilers.length) io.to(room.id).emit('chat:reveal', room.spoilers);
+  room.spoilers = [];
   room.endsAt = null;
   for (const p of room.players.values()) if (p.status === 'guessing') p.status = 'failed';
   schedule(room, REVEAL_SECONDS, () => {
@@ -178,6 +197,7 @@ function seat(socket: GameSocket, room: Room, name: string, key: string) {
       status: room.phase === 'lobby' || room.phase === 'finished' ? 'guessing' : 'failed',
       roundPoints: 0,
       ready: true,
+      lastChatAt: 0,
     };
     room.players.set(player.id, player);
   }
@@ -265,6 +285,7 @@ io.on('connection', (socket: GameSocket) => {
       endsAt: null,
       timer: null,
       cleanup: null,
+      spoilers: [],
     };
     rooms.set(id, room);
     const player = seat(socket, room, cleanName(name), String(key));
@@ -316,6 +337,19 @@ io.on('connection', (socket: GameSocket) => {
     ack({ correct });
     checkRoundOver(room);
     broadcast(room);
+  });
+
+  socket.on('chat:send', (raw) => {
+    const c = current();
+    const text = String(raw ?? '').trim().slice(0, CHAT_MAX_LENGTH);
+    if (!c || !text || Date.now() - c.player.lastChatAt < CHAT_COOLDOWN_MS) return;
+    c.player.lastChatAt = Date.now();
+    const message = { id: ++chatId, playerId: c.player.id, name: c.player.name, text, spoiler: false };
+    if (isSpoiler(c.room, text)) {
+      c.room.spoilers.push({ id: message.id, text });
+      socket.emit('chat:message', { ...message, spoiler: true });
+      socket.to(c.room.id).emit('chat:message', { ...message, text: '', spoiler: true });
+    } else io.to(c.room.id).emit('chat:message', message);
   });
 
   socket.on('round:skip', () => {

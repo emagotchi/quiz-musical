@@ -37,6 +37,17 @@ export interface RoomState {
   reveal: { answer: string; credit?: string } | null;
 }
 
+export interface ChatMessage {
+  id: number;
+  playerId: string;
+  name: string;
+  /** Empty for other players while `spoiler` is set; the text arrives with chat:reveal when the round ends. */
+  text: string;
+  spoiler: boolean;
+}
+
+export const CHAT_MAX_LENGTH = 200;
+
 export type JoinResult = { ok: true; roomId: string; playerId: string } | { ok: false; error: string };
 export type GuessResult = { correct: boolean };
 
@@ -48,10 +59,14 @@ export interface ClientToServer {
   'round:ready': () => void;
   'round:guess': (text: string, ack: (r: GuessResult) => void) => void;
   'round:skip': () => void;
+  'chat:send': (text: string) => void;
 }
 
 export interface ServerToClient {
   'room:state': (state: RoomState) => void;
+  'chat:message': (message: ChatMessage) => void;
+  /** Spoiler messages of the round that just ended, now safe to show. */
+  'chat:reveal': (messages: { id: number; text: string }[]) => void;
 }
 
 export const ROUND_SECONDS = 90;

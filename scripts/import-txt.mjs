@@ -147,6 +147,12 @@ function animeHints(e) {
   e.credit = e.kind ? `${main} — ${e.kind}` : main;
 }
 
+/** A "Nombre" hint edited by hand in the JSON (e.g. "D_____ B___ _" to hide the Z) survives while the answer is the same. */
+function keepEditedName(hints, prev, answer) {
+  const edited = prev?.answer === answer && prev.hints?.find((h) => h.label === 'Nombre');
+  return edited ? hints.map((h) => (h.label === 'Nombre' ? edited : h)) : hints;
+}
+
 for (const pack of PACKS) {
   const outFile = new URL(`src/data/${pack.out}`, root);
   let previous = { tracks: [] };
@@ -178,7 +184,7 @@ for (const pack of PACKS) {
       aliases: prev?.aliases?.length ? prev.aliases : e.aliases,
       youtubeId: e.youtubeId,
       start: prev?.start ?? pack.defaultStart,
-      hints: e.hints,
+      hints: keepEditedName(e.hints, prev, e.answer),
       credit: e.credit,
     };
   });

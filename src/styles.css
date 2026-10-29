@@ -113,3 +113,26 @@ button.small { padding: 6px 10px; margin: 0; }
 .pack-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .check { display: flex; align-items: center; gap: 8px; cursor: pointer; }
 .check input { width: auto; }
+
+.room-side { display: flex; flex-direction: column; gap: 16px; }
+.chat { display: flex; flex-direction: column; gap: 8px; }
+.chat header { display: flex; justify-content: space-between; align-items: center; }
+.chat h3 { margin: 0; }
+.chat ol { list-style: none; padding: 0; margin: 0; max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; overflow-wrap: anywhere; }
+.chat li.me strong { color: var(--accent); }
+.chat form { display: flex; gap: 6px; }
+.chat form input { flex: 1; min-width: 0; }
+.chat-toggle, .chat-close { display: none; }
+
+@media (max-width: 640px) {
+  .room-layout { grid-template-columns: minmax(0, 1fr); }
+  .chat { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; max-height: 70vh;
+    border-radius: var(--radius) var(--radius) 0 0; border-top: 1px solid var(--border); box-shadow: 0 -8px 24px rgb(0 0 0 / 0.3); }
+  .chat.open { display: flex; }
+  .chat ol { max-height: none; flex: 1; min-height: 120px; }
+  .chat-close { display: inline-block; }
+  .chat-toggle { display: block; position: fixed; right: 16px; bottom: 16px; z-index: 19; width: 52px; height: 52px;
+    border-radius: 50%; padding: 0; margin: 0; font-size: 1.4rem; box-shadow: 0 4px 12px rgb(0 0 0 / 0.3); }
+  .chat-toggle .badge { position: absolute; top: -4px; right: -4px; background: var(--fail, #e05555); color: #fff;
+    border-radius: 999px; font-size: 0.75rem; min-width: 20px; padding: 2px 5px; }
+}
