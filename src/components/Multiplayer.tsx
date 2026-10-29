@@ -240,17 +240,33 @@ function HostSettings({ state, label }: { state: RoomState; label: string }) {
 
 /** Podium plus every song of the game, with who got it. */
 function FinalSummary({ state, me }: { state: RoomState; me: string }) {
-  const podium = ranking(state.players).slice(0, 3);
+  // Same score, same place: a tie is shown as a tie instead of whoever joined first winning.
+  const placed = ranking(state.players).map((p) => ({
+    ...p,
+    place: 1 + state.players.filter((o) => o.score > p.score).length,
+    firsts: state.history.filter((r) => r.results.some((x) => x.playerId === p.id && x.first)).length,
+  }));
+  const podium = placed.filter((p) => p.place <= 3);
+  const winners = placed.filter((p) => p.place === 1);
   const medals = ['🥇', '🥈', '🥉'];
   return (
     <div className="panel stack">
-      <h2>🏆 {podium[0]?.name} gana</h2>
+      <h2>
+        {winners.length > 1
+          ? `🤝 Empate: ${winners.map((p) => p.name).join(' y ')}`
+          : `🏆 ${winners[0]?.name} gana`}
+      </h2>
       <ol className="podium">
-        {podium.map((p, i) => (
-          <li key={p.id} className={`place-${i + 1} ${p.id === me ? 'me' : ''}`}>
-            <span className="medal">{medals[i]}</span>
+        {podium.map((p) => (
+          <li key={p.id} className={`place-${p.place} ${p.id === me ? 'me' : ''}`}>
+            <span className="medal">{medals[p.place - 1]}</span>
             <strong>{p.name}</strong>
-            <span className="muted">{p.score} pts</span>
+            <span>{p.score} pts</span>
+            <small className="muted">
+              {p.firsts > 0
+                ? `${p.score - p.firsts * FIRST_BONUS} + ⚡ ${p.firsts * FIRST_BONUS} por ser primero`
+                : 'sin bonus ⚡'}
+            </small>
           </li>
         ))}
       </ol>

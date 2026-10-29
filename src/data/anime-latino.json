@@ -100,7 +100,7 @@
       "answer": "Dragon Ball GT",
       "aliases": [],
       "youtubeId": "oYnvxL9wYgo",
-      "start": 0,
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -334,7 +334,8 @@
       "answer": "Saint Seiya (Los Caballeros del Zodiaco)",
       "aliases": [
         "Saint Seiya",
-        "Los Caballeros del Zodiaco"
+        "Los Caballeros del Zodiaco",
+        "Caballeros del Zodiaco"
       ],
       "youtubeId": "_6dbcQaOddk",
       "start": 1,
@@ -355,7 +356,8 @@
       "answer": "Saint Seiya (Los Caballeros del Zodiaco)",
       "aliases": [
         "Saint Seiya",
-        "Los Caballeros del Zodiaco"
+        "Los Caballeros del Zodiaco",
+        "Caballeros del Zodiaco"
       ],
       "youtubeId": "5M16xIO8P3M",
       "start": 6,
@@ -1221,7 +1223,9 @@
     {
       "id": "koni-chan-opening",
       "answer": "Koni Chan",
-      "aliases": [],
+      "aliases": [
+        "Koni"
+      ],
       "youtubeId": "eBy4lCm5PQE",
       "start": 0,
       "hints": [
