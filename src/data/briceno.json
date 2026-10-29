@@ -3,6 +3,7 @@
   "name": "Cristóbal Briceño",
   "description": "Fother Muckers, Ases Falsos y solista",
   "answerLabel": "canción",
+  "guessPlaceholder": "Escribe el nombre de la canción…",
   "tracks": [
     {
       "id": "ases-falsos-misterios-del-peru",

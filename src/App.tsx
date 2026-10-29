@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import type { Pack, Track } from './types';
 import { PACKS, playableTracks } from './data/packs';
-import { ATTEMPTS, ROUNDS_PER_GAME, shuffle } from './lib/scoring';
+import { ATTEMPTS, ROUNDS_PER_GAME, pickTracks } from './lib/scoring';
 import { Game, type RoundResult } from './components/Game';
 import { Multiplayer } from './components/Multiplayer';
 import { ThemeToggle } from './components/ThemeToggle';
@@ -27,7 +27,7 @@ export default function App() {
   });
 
   const start = (pack: Pack) =>
-    setScreen({ name: 'game', pack, tracks: shuffle(playableTracks(pack)).slice(0, ROUNDS_PER_GAME), key: Date.now() });
+    setScreen({ name: 'game', pack, tracks: pickTracks(playableTracks(pack), ROUNDS_PER_GAME), key: Date.now() });
 
   const finish = useCallback(
     (results: RoundResult[]) => setScreen((s) => (s.name === 'game' ? { name: 'summary', pack: s.pack, results } : s)),

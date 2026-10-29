@@ -26,6 +26,19 @@ export function isCorrect(guess: string, track: Track) {
   return [track.answer, ...(track.aliases ?? [])].some((a) => normalize(a) === g);
 }
 
+/** Random tracks for a game, preferring different answers so one anime with many openings isn't repeated. */
+export function pickTracks(tracks: Track[], count: number) {
+  const seen = new Set<string>();
+  const unique: Track[] = [];
+  const repeats: Track[] = [];
+  for (const t of shuffle(tracks)) {
+    const key = normalize(t.answer);
+    (seen.has(key) ? repeats : unique).push(t);
+    seen.add(key);
+  }
+  return [...unique, ...repeats].slice(0, count);
+}
+
 export function shuffle<T>(items: T[]) {
   const a = [...items];
   for (let i = a.length - 1; i > 0; i--) {

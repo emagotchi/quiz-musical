@@ -253,7 +253,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
           <Hints hints={round.hints} attempt={attempt} />
           <GuessInput
             options={options}
-            placeholder={`Escribe el nombre de la ${pack.answerLabel}…`}
+            placeholder={pack.guessPlaceholder}
             onSubmit={(text) =>
               socket.emit('round:guess', text, (r) => {
                 if (!r.correct) setMisses((m) => [...m, `✗ ${text}`]);

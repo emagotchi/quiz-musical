@@ -25,5 +25,6 @@ export interface Pack {
   description: string;
   /** Noun for the answer in the UI: "canción", "anime"... */
   answerLabel: string;
+  guessPlaceholder: string;
   tracks: Track[];
 }

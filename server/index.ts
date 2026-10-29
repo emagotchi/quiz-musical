@@ -4,7 +4,7 @@ import { extname, join, normalize as normalizePath } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Server, type Socket } from 'socket.io';
 import { PACKS, playableTracks } from '../src/data/packs';
-import { ATTEMPTS, isCorrect, shuffle } from '../src/lib/scoring';
+import { ATTEMPTS, isCorrect, pickTracks } from '../src/lib/scoring';
 import type { Pack, Track } from '../src/types';
 import {
   LOAD_TIMEOUT_SECONDS,
@@ -105,7 +105,7 @@ function schedule(room: Room, seconds: number, fn: () => void) {
 
 function startGame(room: Room, rounds: number) {
   room.rounds = clampRounds(rounds, room.pack);
-  room.queue = shuffle(playableTracks(room.pack)).slice(0, room.rounds);
+  room.queue = pickTracks(playableTracks(room.pack), room.rounds);
   room.roundIndex = 0;
   for (const p of room.players.values()) p.score = 0;
   startRound(room);

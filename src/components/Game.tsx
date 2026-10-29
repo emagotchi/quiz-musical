@@ -108,7 +108,7 @@ export function Game({ pack, tracks, onFinish }: Props) {
 
           <Hints hints={track.hints} attempt={attempt} />
 
-          <GuessInput options={options} placeholder={`Escribe el nombre de la ${pack.answerLabel}…`} onSubmit={guess} />
+          <GuessInput options={options} placeholder={pack.guessPlaceholder} onSubmit={guess} />
           <button className="secondary" onClick={() => miss({ kind: 'skip' })}>
             Saltar (+{ATTEMPTS[attempt + 1]?.seconds ?? 0}s)
           </button>

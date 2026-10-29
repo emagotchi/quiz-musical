@@ -1,0 +1,1258 @@
+{
+  "id": "anime-latino",
+  "name": "Anime en latino",
+  "description": "Openings y endings clásicos en español latino",
+  "answerLabel": "anime",
+  "guessPlaceholder": "Escribe el nombre del anime…",
+  "tracks": [
+    {
+      "id": "dragon-ball-z-opening-2",
+      "answer": "Dragon Ball Z",
+      "aliases": [],
+      "youtubeId": "bgYjEBOWTKQ",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 2"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___   Z"
+        }
+      ],
+      "credit": "Dragon Ball Z — Opening 2"
+    },
+    {
+      "id": "dragon-ball-opening",
+      "answer": "Dragon Ball",
+      "aliases": [],
+      "youtubeId": "9Hbd1QeI1Og",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___"
+        }
+      ],
+      "credit": "Dragon Ball — Opening"
+    },
+    {
+      "id": "dragon-ball-ending",
+      "answer": "Dragon Ball",
+      "aliases": [],
+      "youtubeId": "Cf4YU-sRRBQ",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___"
+        }
+      ],
+      "credit": "Dragon Ball — Ending"
+    },
+    {
+      "id": "dragon-ball-z-opening-1",
+      "answer": "Dragon Ball Z",
+      "aliases": [],
+      "youtubeId": "VvIJioXyKaQ",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 1"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___   Z"
+        }
+      ],
+      "credit": "Dragon Ball Z — Opening 1"
+    },
+    {
+      "id": "dragon-ball-gt-opening",
+      "answer": "Dragon Ball GT",
+      "aliases": [],
+      "youtubeId": "oYnvxL9wYgo",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___   G_"
+        }
+      ],
+      "credit": "Dragon Ball GT — Opening"
+    },
+    {
+      "id": "dragon-ball-gt-ending",
+      "answer": "Dragon Ball GT",
+      "aliases": [],
+      "youtubeId": "vyeM7DLtwRM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_____   B___   G_"
+        }
+      ],
+      "credit": "Dragon Ball GT — Ending"
+    },
+    {
+      "id": "ranma-1-2-ending",
+      "answer": "Ranma 1/2",
+      "aliases": [],
+      "youtubeId": "OqUI3tiW7Xw",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "R____   1/_"
+        }
+      ],
+      "credit": "Ranma 1/2 — Ending"
+    },
+    {
+      "id": "sailor-moon-opening",
+      "answer": "Sailor Moon",
+      "aliases": [],
+      "youtubeId": "9NanowbK60Y",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   M___"
+        }
+      ],
+      "credit": "Sailor Moon — Opening"
+    },
+    {
+      "id": "sailor-moon-ending",
+      "answer": "Sailor Moon",
+      "aliases": [],
+      "youtubeId": "pcw4kQVG6CM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   M___"
+        }
+      ],
+      "credit": "Sailor Moon — Ending"
+    },
+    {
+      "id": "sakura-card-captor-opening",
+      "answer": "Sakura Card Captor",
+      "aliases": [],
+      "youtubeId": "sh59AvisoZ4",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   C___   C_____"
+        }
+      ],
+      "credit": "Sakura Card Captor — Opening"
+    },
+    {
+      "id": "sakura-card-captor-ending",
+      "answer": "Sakura Card Captor",
+      "aliases": [],
+      "youtubeId": "YjZwtGa2eZw",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   C___   C_____"
+        }
+      ],
+      "credit": "Sakura Card Captor — Ending"
+    },
+    {
+      "id": "digimon-adventure-opening",
+      "answer": "Digimon Adventure",
+      "aliases": [],
+      "youtubeId": "LNHpNi47x7Q",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D______   A________"
+        }
+      ],
+      "credit": "Digimon Adventure — Opening"
+    },
+    {
+      "id": "digimon-adventure-ending",
+      "answer": "Digimon Adventure",
+      "aliases": [],
+      "youtubeId": "u6YUOOoqRbo",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "D______   A________"
+        }
+      ],
+      "credit": "Digimon Adventure — Ending"
+    },
+    {
+      "id": "digimon-tamers-opening",
+      "answer": "Digimon Tamers",
+      "aliases": [],
+      "youtubeId": "dVA4G20xaQU",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D______   T_____"
+        }
+      ],
+      "credit": "Digimon Tamers — Opening"
+    },
+    {
+      "id": "digimon-tamers-ending",
+      "answer": "Digimon Tamers",
+      "aliases": [],
+      "youtubeId": "CCd1wcZp--I",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "D______   T_____"
+        }
+      ],
+      "credit": "Digimon Tamers — Ending"
+    },
+    {
+      "id": "digimon-adventure-02-opening",
+      "answer": "Digimon Adventure 02",
+      "aliases": [],
+      "youtubeId": "GaD6f293CJ4",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D______   A________   0_"
+        }
+      ],
+      "credit": "Digimon Adventure 02 — Opening"
+    },
+    {
+      "id": "super-campeones-opening",
+      "answer": "Super Campeones",
+      "aliases": [],
+      "youtubeId": "rJzNgkjQY78",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S____   C________"
+        }
+      ],
+      "credit": "Super Campeones — Opening"
+    },
+    {
+      "id": "saint-seiya-opening-1",
+      "answer": "Saint Seiya (Los Caballeros del Zodiaco)",
+      "aliases": [
+        "Saint Seiya",
+        "Los Caballeros del Zodiaco"
+      ],
+      "youtubeId": "_6dbcQaOddk",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 1"
+        },
+        {
+          "label": "Nombre",
+          "value": "S____   S____"
+        }
+      ],
+      "credit": "Saint Seiya — Opening 1"
+    },
+    {
+      "id": "saint-seiya-ending-1",
+      "answer": "Saint Seiya (Los Caballeros del Zodiaco)",
+      "aliases": [
+        "Saint Seiya",
+        "Los Caballeros del Zodiaco"
+      ],
+      "youtubeId": "5M16xIO8P3M",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 1"
+        },
+        {
+          "label": "Nombre",
+          "value": "S____   S____"
+        }
+      ],
+      "credit": "Saint Seiya — Ending 1"
+    },
+    {
+      "id": "candy-candy-opening",
+      "answer": "Candy Candy",
+      "aliases": [],
+      "youtubeId": "39mbBe7Nv7I",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "C____   C____"
+        }
+      ],
+      "credit": "Candy Candy — Opening"
+    },
+    {
+      "id": "candy-candy-ending",
+      "answer": "Candy Candy",
+      "aliases": [],
+      "youtubeId": "mbIZudMnc7Y",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "C____   C____"
+        }
+      ],
+      "credit": "Candy Candy — Ending"
+    },
+    {
+      "id": "heidi-ghux-vkr7xc",
+      "answer": "Heidi",
+      "aliases": [],
+      "youtubeId": "GHUx-vKr7Xc",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Nombre",
+          "value": "H____"
+        }
+      ],
+      "credit": "Heidi"
+    },
+    {
+      "id": "marco-opsqqfakmma",
+      "answer": "Marco",
+      "aliases": [],
+      "youtubeId": "OPsQQFakmmA",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Nombre",
+          "value": "M____"
+        }
+      ],
+      "credit": "Marco"
+    },
+    {
+      "id": "marmalade-boy-opening",
+      "answer": "Marmalade Boy",
+      "aliases": [],
+      "youtubeId": "3dJyu7_I94c",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "M________   B__"
+        }
+      ],
+      "credit": "Marmalade Boy — Opening"
+    },
+    {
+      "id": "marmalade-boy-ending",
+      "answer": "Marmalade Boy",
+      "aliases": [],
+      "youtubeId": "MWhKqlJ8od8",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "M________   B__"
+        }
+      ],
+      "credit": "Marmalade Boy — Ending"
+    },
+    {
+      "id": "dr-slump-opening",
+      "answer": "Dr. Slump (Arale)",
+      "aliases": [
+        "Dr. Slump",
+        "Arale"
+      ],
+      "youtubeId": "SvZJVgD53uA",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_.   S____"
+        }
+      ],
+      "credit": "Dr. Slump — Opening"
+    },
+    {
+      "id": "kinnikuman-opening",
+      "answer": "Kinnikuman",
+      "aliases": [],
+      "youtubeId": "y0EI3G4PvTM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "K_________"
+        }
+      ],
+      "credit": "Kinnikuman — Opening"
+    },
+    {
+      "id": "escuela-de-detectives-opening",
+      "answer": "Escuela de Detectives",
+      "aliases": [],
+      "youtubeId": "1QHEvyKOql8",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "E______   d_   D_________"
+        }
+      ],
+      "credit": "Escuela de Detectives — Opening"
+    },
+    {
+      "id": "escuela-de-detectives-ending",
+      "answer": "Escuela de Detectives",
+      "aliases": [],
+      "youtubeId": "mVXo84U-uZU",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "E______   d_   D_________"
+        }
+      ],
+      "credit": "Escuela de Detectives — Ending"
+    },
+    {
+      "id": "pokemon-opening-1",
+      "answer": "Pokémon",
+      "aliases": [],
+      "youtubeId": "8RXz6Uru9WY",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 1"
+        },
+        {
+          "label": "Nombre",
+          "value": "P______"
+        }
+      ],
+      "credit": "Pokémon — Opening 1"
+    },
+    {
+      "id": "shaman-king-opening",
+      "answer": "Shaman King",
+      "aliases": [],
+      "youtubeId": "qYRgEn-qvZY",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   K___"
+        }
+      ],
+      "credit": "Shaman King — Opening"
+    },
+    {
+      "id": "pokemon-opening-3",
+      "answer": "Pokémon",
+      "aliases": [],
+      "youtubeId": "dWgG3bnVUS0",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 3"
+        },
+        {
+          "label": "Nombre",
+          "value": "P______"
+        }
+      ],
+      "credit": "Pokémon — Opening 3"
+    },
+    {
+      "id": "nube-opening",
+      "answer": "Nube",
+      "aliases": [],
+      "youtubeId": "cymn7uIsGJE",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "N___"
+        }
+      ],
+      "credit": "Nube — Opening"
+    },
+    {
+      "id": "cazador-x-opening",
+      "answer": "Cazador X",
+      "aliases": [],
+      "youtubeId": "5btxwkHGr_A",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "C______   X"
+        }
+      ],
+      "credit": "Cazador X — Opening"
+    },
+    {
+      "id": "cazador-x-ending",
+      "answer": "Cazador X",
+      "aliases": [],
+      "youtubeId": "P8I13EUQa5Y",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "C______   X"
+        }
+      ],
+      "credit": "Cazador X — Ending"
+    },
+    {
+      "id": "inuyasha-opening-1",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "suU86VJt5a0",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 1"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Opening 1"
+    },
+    {
+      "id": "inuyasha-opening-2",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "rlpRZi8hw9M",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 2"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Opening 2"
+    },
+    {
+      "id": "inuyasha-opening-5",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "XH0vOeKvdDM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 5"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Opening 5"
+    },
+    {
+      "id": "inuyasha-opening-4",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "-qTrtaXdfUQ",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 4"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Opening 4"
+    },
+    {
+      "id": "inuyasha-opening-3",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "bYlFsWJ4cC8",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 3"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Opening 3"
+    },
+    {
+      "id": "inuyasha-ending-7",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "1wjXOXsdI98",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 7"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Ending 7"
+    },
+    {
+      "id": "inuyasha-ending-5",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "qObLN0lujyY",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 5"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Ending 5"
+    },
+    {
+      "id": "inuyasha-ending-4",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "snI7BzM2-mg",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 4"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Ending 4"
+    },
+    {
+      "id": "inuyasha-ending-3",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "5X_r2ytXjv8",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 3"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Ending 3"
+    },
+    {
+      "id": "inuyasha-ending-2",
+      "answer": "Inuyasha",
+      "aliases": [],
+      "youtubeId": "UAiQq0UHvv8",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 2"
+        },
+        {
+          "label": "Nombre",
+          "value": "I_______"
+        }
+      ],
+      "credit": "Inuyasha — Ending 2"
+    },
+    {
+      "id": "hamtaro-opening",
+      "answer": "Hamtaro",
+      "aliases": [],
+      "youtubeId": "xVtJxxll1gk",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "H______"
+        }
+      ],
+      "credit": "Hamtaro — Opening"
+    },
+    {
+      "id": "hamtaro-ending",
+      "answer": "Hamtaro",
+      "aliases": [],
+      "youtubeId": "PBa0Xqgt1uw",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "H______"
+        }
+      ],
+      "credit": "Hamtaro — Ending"
+    },
+    {
+      "id": "zoids-opening",
+      "answer": "Zoids",
+      "aliases": [],
+      "youtubeId": "RZ-LxkMkxTY",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "Z____"
+        }
+      ],
+      "credit": "Zoids — Opening"
+    },
+    {
+      "id": "detective-conan-opening",
+      "answer": "Detective Conan",
+      "aliases": [],
+      "youtubeId": "08oedE10qI8",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D________   C____"
+        }
+      ],
+      "credit": "Detective Conan — Opening"
+    },
+    {
+      "id": "shaman-king-ending",
+      "answer": "Shaman King",
+      "aliases": [],
+      "youtubeId": "EsfAzr9uzD0",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   K___"
+        }
+      ],
+      "credit": "Shaman King — Ending"
+    },
+    {
+      "id": "shaman-king-opening-2",
+      "answer": "Shaman King",
+      "aliases": [],
+      "youtubeId": "ccg6nZ9Dqq4",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   K___"
+        }
+      ],
+      "credit": "Shaman King — Opening"
+    },
+    {
+      "id": "shaman-king-ending-2",
+      "answer": "Shaman King",
+      "aliases": [],
+      "youtubeId": "R5PM09ylB94",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending 2"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   K___"
+        }
+      ],
+      "credit": "Shaman King — Ending 2"
+    },
+    {
+      "id": "shaman-king-opening-2-2",
+      "answer": "Shaman King",
+      "aliases": [],
+      "youtubeId": "fGVw01FnOto",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening 2"
+        },
+        {
+          "label": "Nombre",
+          "value": "S_____   K___"
+        }
+      ],
+      "credit": "Shaman King — Opening 2"
+    },
+    {
+      "id": "slam-dunk-opening",
+      "answer": "Slam Dunk",
+      "aliases": [],
+      "youtubeId": "V86x1_feLTo",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S___   D___"
+        }
+      ],
+      "credit": "Slam Dunk — Opening"
+    },
+    {
+      "id": "slam-dunk-ending",
+      "answer": "Slam Dunk",
+      "aliases": [],
+      "youtubeId": "XzI4q4wS9tM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "S___   D___"
+        }
+      ],
+      "credit": "Slam Dunk — Ending"
+    },
+    {
+      "id": "slayers-opening",
+      "answer": "Slayers (Los Justicieros)",
+      "aliases": [
+        "Slayers",
+        "Los Justicieros"
+      ],
+      "youtubeId": "Ir_VocF5g0k",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S______"
+        }
+      ],
+      "credit": "Slayers — Opening"
+    },
+    {
+      "id": "slayers-ending",
+      "answer": "Slayers (Los Justicieros)",
+      "aliases": [
+        "Slayers",
+        "Los Justicieros"
+      ],
+      "youtubeId": "n_xFAIzdEmU",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "S______"
+        }
+      ],
+      "credit": "Slayers — Ending"
+    },
+    {
+      "id": "yu-yu-hakusho-opening",
+      "answer": "Yu Yu Hakusho",
+      "aliases": [],
+      "youtubeId": "Oq3avtufuRQ",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "Y_   Y_   H______"
+        }
+      ],
+      "credit": "Yu Yu Hakusho — Opening"
+    },
+    {
+      "id": "yu-yu-hakusho-ending",
+      "answer": "Yu Yu Hakusho",
+      "aliases": [],
+      "youtubeId": "Pjejru2htVY",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Ending"
+        },
+        {
+          "label": "Nombre",
+          "value": "Y_   Y_   H______"
+        }
+      ],
+      "credit": "Yu Yu Hakusho — Ending"
+    },
+    {
+      "id": "kaleido-star-opening",
+      "answer": "Kaleido Star",
+      "aliases": [],
+      "youtubeId": "7ooYTdFm5pI",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "K______   S___"
+        }
+      ],
+      "credit": "Kaleido Star — Opening"
+    },
+    {
+      "id": "beyblade-opening",
+      "answer": "Beyblade",
+      "aliases": [],
+      "youtubeId": "qHL-XX3PElc",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "B_______"
+        }
+      ],
+      "credit": "Beyblade — Opening"
+    },
+    {
+      "id": "ranma-1-2-opening",
+      "answer": "Ranma 1/2",
+      "aliases": [],
+      "youtubeId": "pZ3qsLzssKI",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "R____   1/_"
+        }
+      ],
+      "credit": "Ranma 1/2 — Opening"
+    },
+    {
+      "id": "samurai-x-opening",
+      "answer": "Samurai X",
+      "aliases": [],
+      "youtubeId": "YvvlGma6COM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "S______   X"
+        }
+      ],
+      "credit": "Samurai X — Opening"
+    },
+    {
+      "id": "mikami-opening",
+      "answer": "Mikami",
+      "aliases": [],
+      "youtubeId": "aS7soCJEHHM",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "M_____"
+        }
+      ],
+      "credit": "Mikami — Opening"
+    },
+    {
+      "id": "mirmo-zibang-opening",
+      "answer": "Mirmo Zibang",
+      "aliases": [],
+      "youtubeId": "hT5ktaZaaXE",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "M____   Z_____"
+        }
+      ],
+      "credit": "Mirmo Zibang — Opening"
+    },
+    {
+      "id": "magical-doremi-opening",
+      "answer": "Magical Doremi",
+      "aliases": [],
+      "youtubeId": "RHlJjcPBf84",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "M______   D_____"
+        }
+      ],
+      "credit": "Magical Doremi — Opening"
+    },
+    {
+      "id": "koni-chan-opening",
+      "answer": "Koni Chan",
+      "aliases": [],
+      "youtubeId": "eBy4lCm5PQE",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "K___   C___"
+        }
+      ],
+      "credit": "Koni Chan — Opening"
+    },
+    {
+      "id": "eyeshield-21-opening",
+      "answer": "Eyeshield 21",
+      "aliases": [],
+      "youtubeId": "nC4WpvIEuf0",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "E________   2_"
+        }
+      ],
+      "credit": "Eyeshield 21 — Opening"
+    },
+    {
+      "id": "monster-rancher-opening",
+      "answer": "Monster Rancher",
+      "aliases": [],
+      "youtubeId": "eaRZwCpWGSQ",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "M______   R______"
+        }
+      ],
+      "credit": "Monster Rancher — Opening"
+    }
+  ]
+}
