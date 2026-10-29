@@ -4,7 +4,7 @@ import { extname, join, normalize as normalizePath } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Server, type Socket } from 'socket.io';
 import { PACKS, playableTracks } from '../src/data/packs';
-import { ATTEMPTS, isCorrect, pickTracks } from '../src/lib/scoring';
+import { ATTEMPTS, chaosSpots, isCorrect, pickTracks } from '../src/lib/scoring';
 import type { Pack, Track } from '../src/types';
 import {
   LOAD_TIMEOUT_SECONDS,
@@ -35,6 +35,9 @@ interface Room {
   hostId: string;
   pack: Pack;
   rounds: number;
+  chaos: boolean;
+  /** Chaos-mode clip positions for the current round. */
+  spots: number[] | null;
   phase: Phase;
   players: Map<string, Player>;
   queue: Track[];
@@ -70,6 +73,7 @@ function snapshot(room: Room): RoomState {
     packId: room.pack.id,
     phase: room.phase,
     rounds: room.rounds,
+    chaos: room.chaos,
     players: [...room.players.values()].map((p) => ({
       id: p.id,
       name: p.name,
@@ -87,6 +91,7 @@ function snapshot(room: Room): RoomState {
             youtubeId: track.youtubeId,
             start: track.start,
             hints: track.hints,
+            spots: room.spots,
             remainingMs: room.endsAt === null ? null : Math.max(0, room.endsAt - Date.now()),
           }
         : null,
@@ -103,8 +108,9 @@ function schedule(room: Room, seconds: number, fn: () => void) {
   room.timer = setTimeout(fn, seconds * 1000);
 }
 
-function startGame(room: Room, rounds: number) {
+function startGame(room: Room, rounds: number, chaos: boolean) {
   room.rounds = clampRounds(rounds, room.pack);
+  room.chaos = chaos;
   room.queue = pickTracks(playableTracks(room.pack), room.rounds);
   room.roundIndex = 0;
   for (const p of room.players.values()) p.score = 0;
@@ -114,6 +120,7 @@ function startGame(room: Room, rounds: number) {
 function startRound(room: Room) {
   room.phase = 'loading';
   room.endsAt = null;
+  room.spots = room.chaos ? chaosSpots() : null;
   for (const p of room.players.values()) Object.assign(p, { attempt: 0, status: 'guessing', roundPoints: 0, ready: false });
   schedule(room, LOAD_TIMEOUT_SECONDS, () => beginPlaying(room));
   broadcast(room);
@@ -249,6 +256,8 @@ io.on('connection', (socket: GameSocket) => {
       hostId: '',
       pack,
       rounds: clampRounds(rounds, pack),
+      chaos: false,
+      spots: null,
       phase: 'lobby',
       players: new Map(),
       queue: [],
@@ -279,10 +288,10 @@ io.on('connection', (socket: GameSocket) => {
     return room && player ? { room, player } : null;
   };
 
-  socket.on('game:start', ({ rounds }) => {
+  socket.on('game:start', ({ rounds, chaos }) => {
     const c = current();
     if (!c || c.room.hostId !== c.player.id) return;
-    if (c.room.phase === 'lobby' || c.room.phase === 'finished') startGame(c.room, rounds);
+    if (c.room.phase === 'lobby' || c.room.phase === 'finished') startGame(c.room, rounds, Boolean(chaos));
   });
 
   socket.on('round:ready', () => {

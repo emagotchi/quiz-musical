@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Pack } from '../types';
 import type { JoinResult, PublicPlayer, RoomState } from '../shared/protocol';
 import { PACKS, playableTracks } from '../data/packs';
-import { ATTEMPTS, ROUNDS_PER_GAME } from '../lib/scoring';
+import { ATTEMPTS, ROUNDS_PER_GAME, chaosStart } from '../lib/scoring';
 import { playerKey, saveName, savedName, socket } from '../lib/socket';
 import { useClipPlayer } from '../lib/useClipPlayer';
 import { AttemptBar, Hints } from './AttemptBar';
@@ -128,6 +128,7 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
 function Room({ state, pack, me, onLeave }: { state: RoomState; pack: Pack; me: string; onLeave: () => void }) {
   const isHost = state.hostId === me;
   const [rounds, setRounds] = useState(state.rounds);
+  const [chaos, setChaos] = useState(state.chaos);
   const maxRounds = Math.min(30, playableTracks(pack).length);
 
   return (
@@ -159,7 +160,11 @@ function Room({ state, pack, me, onLeave }: { state: RoomState; pack: Pack; me: 
                       onChange={(e) => setRounds(Number(e.target.value))}
                     />
                   </label>
-                  <button onClick={() => socket.emit('game:start', { rounds })}>Empezar partida</button>
+                  <label className="check">
+                    <input type="checkbox" checked={chaos} onChange={(e) => setChaos(e.target.checked)} />
+                    🎲 Modo caos: cada pista suena en un momento distinto de la canción
+                  </label>
+                  <button onClick={() => socket.emit('game:start', { rounds, chaos })}>Empezar partida</button>
                 </>
               ) : (
                 <p className="muted">Esperando a que el anfitrión empiece…</p>
@@ -175,7 +180,7 @@ function Room({ state, pack, me, onLeave }: { state: RoomState; pack: Pack; me: 
             <div className="panel stack">
               <h2>🏆 {ranking(state.players)[0]?.name} gana</h2>
               {isHost ? (
-                <button onClick={() => socket.emit('game:start', { rounds })}>Jugar de nuevo</button>
+                <button onClick={() => socket.emit('game:start', { rounds, chaos })}>Jugar de nuevo</button>
               ) : (
                 <p className="muted">El anfitrión puede empezar otra partida.</p>
               )}
@@ -207,6 +212,8 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
     () => [...new Set(pack.tracks.map((t) => t.answer))].sort((a, b) => a.localeCompare(b, 'es')),
     [pack],
   );
+  const clipAt = (i: number) =>
+    round.spots ? chaosStart(round.spots[i], ATTEMPTS[i].seconds, player.duration()) : round.start;
 
   // New round: cue the video and reset local guesses.
   useEffect(() => {
@@ -217,7 +224,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
 
   // Play a clip when the round starts and every time this player's attempt grows.
   useEffect(() => {
-    if (state.phase === 'playing' && myStatus === 'guessing') player.playClip(round.start, ATTEMPTS[attempt].seconds);
+    if (state.phase === 'playing' && myStatus === 'guessing') player.playClip(clipAt(attempt), ATTEMPTS[attempt].seconds);
   }, [state.phase, attempt, round.index]);
 
   useEffect(() => {
@@ -232,6 +239,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
       <div className="game-header">
         <span>
           Ronda {round.index + 1}/{round.total}
+          {round.spots && ' · 🎲 Caos'}
         </span>
         {playing && <span className={remaining <= 10 ? 'fail' : ''}>⏱ {remaining}s</span>}
       </div>
@@ -246,7 +254,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
           <button
             className="play"
             disabled={!player.ready || player.playing}
-            onClick={() => player.playClip(round.start, ATTEMPTS[attempt].seconds)}
+            onClick={() => player.playClip(clipAt(attempt), ATTEMPTS[attempt].seconds)}
           >
             {player.playing ? 'Sonando…' : `▶ Escuchar ${ATTEMPTS[attempt].seconds}s`}
           </button>

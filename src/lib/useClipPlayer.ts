@@ -100,5 +100,8 @@ export function useClipPlayer(callbacks: { onError: (code: number) => void; onCu
     [stop],
   );
 
-  return { hostRef, ready, playing, load, playClip, playFrom, stop };
+  /** Length of the loaded video in seconds, or 0 while YouTube doesn't know it yet. */
+  const duration = useCallback(() => playerRef.current?.getDuration() ?? 0, []);
+
+  return { hostRef, ready, playing, load, playClip, playFrom, stop, duration };
 }

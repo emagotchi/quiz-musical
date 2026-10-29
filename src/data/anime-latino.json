@@ -6,7 +6,7 @@
   "guessPlaceholder": "Escribe el nombre del anime…",
   "tracks": [
     {
-      "id": "dragon-ball-z-opening-2",
+      "id": "dragon-ball-z-opening",
       "answer": "Dragon Ball Z",
       "aliases": [],
       "youtubeId": "bgYjEBOWTKQ",
@@ -14,14 +14,14 @@
       "hints": [
         {
           "label": "Tipo",
-          "value": "Opening 2"
+          "value": "Opening"
         },
         {
           "label": "Nombre",
           "value": "D_____   B___   Z"
         }
       ],
-      "credit": "Dragon Ball Z — Opening 2"
+      "credit": "Dragon Ball Z — Opening"
     },
     {
       "id": "dragon-ball-opening",
@@ -60,7 +60,7 @@
       "credit": "Dragon Ball — Ending"
     },
     {
-      "id": "dragon-ball-z-opening-1",
+      "id": "dragon-ball-z-ending",
       "answer": "Dragon Ball Z",
       "aliases": [],
       "youtubeId": "VvIJioXyKaQ",
@@ -68,14 +68,14 @@
       "hints": [
         {
           "label": "Tipo",
-          "value": "Opening 1"
+          "value": "Ending"
         },
         {
           "label": "Nombre",
           "value": "D_____   B___   Z"
         }
       ],
-      "credit": "Dragon Ball Z — Opening 1"
+      "credit": "Dragon Ball Z — Ending"
     },
     {
       "id": "dragon-ball-gt-opening",
@@ -100,7 +100,7 @@
       "answer": "Dragon Ball GT",
       "aliases": [],
       "youtubeId": "vyeM7DLtwRM",
-      "start": 0,
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -117,8 +117,8 @@
       "id": "ranma-1-2-ending",
       "answer": "Ranma 1/2",
       "aliases": [],
-      "youtubeId": "OqUI3tiW7Xw",
-      "start": 0,
+      "youtubeId": "2HmD1VqOjy4",
+      "start": 3,
       "hints": [
         {
           "label": "Tipo",
@@ -172,7 +172,7 @@
       "answer": "Sakura Card Captor",
       "aliases": [],
       "youtubeId": "sh59AvisoZ4",
-      "start": 0,
+      "start": 2,
       "hints": [
         {
           "label": "Tipo",
@@ -319,7 +319,7 @@
         "Los Caballeros del Zodiaco"
       ],
       "youtubeId": "_6dbcQaOddk",
-      "start": 0,
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -358,7 +358,7 @@
       "answer": "Candy Candy",
       "aliases": [],
       "youtubeId": "39mbBe7Nv7I",
-      "start": 0,
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -408,7 +408,7 @@
       "answer": "Marco",
       "aliases": [],
       "youtubeId": "OPsQQFakmmA",
-      "start": 0,
+      "start": 11,
       "hints": [
         {
           "label": "Nombre",
@@ -461,7 +461,7 @@
         "Arale"
       ],
       "youtubeId": "SvZJVgD53uA",
-      "start": 0,
+      "start": 2,
       "hints": [
         {
           "label": "Tipo",
@@ -551,7 +551,7 @@
       "answer": "Shaman King",
       "aliases": [],
       "youtubeId": "qYRgEn-qvZY",
-      "start": 0,
+      "start": 1,
       "hints": [
         {
           "label": "Tipo",
@@ -587,7 +587,7 @@
       "answer": "Nube",
       "aliases": [],
       "youtubeId": "cymn7uIsGJE",
-      "start": 0,
+      "start": 37,
       "hints": [
         {
           "label": "Tipo",
@@ -641,7 +641,7 @@
       "answer": "Inuyasha",
       "aliases": [],
       "youtubeId": "suU86VJt5a0",
-      "start": 0,
+      "start": 2,
       "hints": [
         {
           "label": "Tipo",
@@ -965,7 +965,7 @@
       "answer": "Slam Dunk",
       "aliases": [],
       "youtubeId": "V86x1_feLTo",
-      "start": 0,
+      "start": 12,
       "hints": [
         {
           "label": "Tipo",
@@ -1004,7 +1004,7 @@
         "Los Justicieros"
       ],
       "youtubeId": "Ir_VocF5g0k",
-      "start": 0,
+      "start": 10,
       "hints": [
         {
           "label": "Tipo",
@@ -1061,7 +1061,7 @@
       "answer": "Yu Yu Hakusho",
       "aliases": [],
       "youtubeId": "Pjejru2htVY",
-      "start": 0,
+      "start": 3,
       "hints": [
         {
           "label": "Tipo",
@@ -1133,7 +1133,7 @@
       "answer": "Samurai X",
       "aliases": [],
       "youtubeId": "YvvlGma6COM",
-      "start": 0,
+      "start": 10,
       "hints": [
         {
           "label": "Tipo",
@@ -1253,6 +1253,60 @@
         }
       ],
       "credit": "Monster Rancher — Opening"
+    },
+    {
+      "id": "doraemon-opening",
+      "answer": "Doraemon",
+      "aliases": [],
+      "youtubeId": "jqlZXcdeTEE",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "D_______"
+        }
+      ],
+      "credit": "Doraemon — Opening"
+    },
+    {
+      "id": "zenki-opening",
+      "answer": "Zenki",
+      "aliases": [],
+      "youtubeId": "fPvfi9Rf1qc",
+      "start": 0,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "Z____"
+        }
+      ],
+      "credit": "Zenki — Opening"
+    },
+    {
+      "id": "31-minutos-opening",
+      "answer": "31 minutos",
+      "aliases": [],
+      "youtubeId": "ppiuQuD15wQ",
+      "start": 10,
+      "hints": [
+        {
+          "label": "Tipo",
+          "value": "Opening"
+        },
+        {
+          "label": "Nombre",
+          "value": "3_   m______"
+        }
+      ],
+      "credit": "31 minutos — Opening"
     }
   ]
 }

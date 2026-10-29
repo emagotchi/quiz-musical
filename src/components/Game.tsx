@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { Pack, Track } from '../types';
-import { ATTEMPTS, isCorrect } from '../lib/scoring';
+import { ATTEMPTS, chaosSpots, chaosStart, isCorrect } from '../lib/scoring';
 import { useClipPlayer } from '../lib/useClipPlayer';
 import { GuessInput } from './GuessInput';
 import { AttemptBar, Hints } from './AttemptBar';
@@ -15,12 +15,14 @@ export interface RoundResult {
 interface Props {
   pack: Pack;
   tracks: Track[];
+  /** Every attempt plays a different random part of the song. */
+  chaos: boolean;
   onFinish: (results: RoundResult[]) => void;
 }
 
 type Miss = { kind: 'wrong'; guess: string } | { kind: 'skip' };
 
-export function Game({ pack, tracks, onFinish }: Props) {
+export function Game({ pack, tracks, chaos, onFinish }: Props) {
   const [queue, setQueue] = useState(tracks);
   const [round, setRound] = useState(0);
   const [attempt, setAttempt] = useState(0);
@@ -36,6 +38,9 @@ export function Game({ pack, tracks, onFinish }: Props) {
       setQueue((q) => q.filter((_, i) => i !== round));
     },
   });
+
+  const spots = useMemo(() => (chaos ? chaosSpots() : null), [chaos, round, track?.id]);
+  const clipAt = (i: number) => (spots ? chaosStart(spots[i], ATTEMPTS[i].seconds, player.duration()) : track.start);
 
   const options = useMemo(
     () => [...new Set(pack.tracks.map((t) => t.answer))].sort((a, b) => a.localeCompare(b, 'es')),
@@ -65,7 +70,7 @@ export function Game({ pack, tracks, onFinish }: Props) {
     setMisses((ms) => [...ms, m]);
     if (attempt + 1 >= ATTEMPTS.length) return finishRound(null);
     setAttempt(attempt + 1);
-    player.playClip(track.start, ATTEMPTS[attempt + 1].seconds);
+    player.playClip(clipAt(attempt + 1), ATTEMPTS[attempt + 1].seconds);
   }
 
   function guess(text: string) {
@@ -89,6 +94,7 @@ export function Game({ pack, tracks, onFinish }: Props) {
         <span>
           Ronda {round + 1}/{queue.length}
         </span>
+        {chaos && <span>🎲 Caos</span>}
         <span>{total} pts</span>
       </header>
 
@@ -101,7 +107,7 @@ export function Game({ pack, tracks, onFinish }: Props) {
           <button
             className="play"
             disabled={!player.ready || player.playing}
-            onClick={() => player.playClip(track.start, step.seconds)}
+            onClick={() => player.playClip(clipAt(attempt), step.seconds)}
           >
             {player.playing ? 'Sonando…' : `▶ Escuchar ${step.seconds}s`}
           </button>

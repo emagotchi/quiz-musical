@@ -39,6 +39,20 @@ export function pickTracks(tracks: Track[], count: number) {
   return [...unique, ...repeats].slice(0, count);
 }
 
+/** Chaos mode: one random spot per attempt, as a 0–1 fraction of the song (the length isn't known until it loads). */
+export function chaosSpots() {
+  return ATTEMPTS.map(() => Math.random());
+}
+
+/** Second where a chaos clip starts. Skips the first seconds and the last 10% (intros/outros are often silent). */
+export function chaosStart(spot: number, seconds: number, duration: number) {
+  // Before the video reports its length, assume a TV-size opening (~1:30) so we never seek past the end.
+  const length = duration > 0 ? duration : 85;
+  const from = Math.min(3, length / 10);
+  const to = Math.max(from, length * 0.9 - seconds);
+  return Math.floor(from + spot * (to - from));
+}
+
 export function shuffle<T>(items: T[]) {
   const a = [...items];
   for (let i = a.length - 1; i > 0; i--) {

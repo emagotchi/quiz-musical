@@ -6,7 +6,7 @@
 // Anime format ("anime latino.txt"): "Anime name https://youtube.com/watch?v=ID #Opening 2".
 // Text in parentheses is an accepted alternative name: "Saint Seiya (Los Caballeros del Zodiaco)".
 //
-// Hand-edited fields already in the JSON (start, aliases) are kept on re-import.
+// Hand-edited fields already in the JSON (start, aliases) are kept on re-import, matched by id or video.
 import { readFile, writeFile } from 'node:fs/promises';
 
 const PACKS = [
@@ -156,6 +156,8 @@ for (const pack of PACKS) {
     // first import of this pack
   }
   const prevById = new Map(previous.tracks.map((t) => [t.id, t]));
+  // Fallback when the id changed (e.g. "#Opening 2" -> "#Opening"): same video, same hand-edited start.
+  const prevByVideo = new Map(previous.tracks.map((t) => [t.youtubeId, t]));
 
   const entries = [];
   for (const source of pack.sources) {
@@ -169,7 +171,7 @@ for (const pack of PACKS) {
     let id = e.id;
     for (let n = 2; seen.has(id); n++) id = `${e.id}-${n}`;
     seen.add(id);
-    const prev = prevById.get(id);
+    const prev = prevById.get(id) ?? prevByVideo.get(e.youtubeId);
     return {
       id,
       answer: e.answer,

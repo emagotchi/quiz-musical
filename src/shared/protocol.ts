@@ -19,6 +19,8 @@ export interface RoundInfo {
   youtubeId: string;
   start: number;
   hints: Hint[];
+  /** Chaos mode: random spot (0–1 of the song) for each attempt, the same for every player. */
+  spots: number[] | null;
   /** Milliseconds left in the round when this state was sent (null while loading). */
   remainingMs: number | null;
 }
@@ -29,6 +31,7 @@ export interface RoomState {
   packId: string;
   phase: Phase;
   rounds: number;
+  chaos: boolean;
   players: PublicPlayer[];
   round: RoundInfo | null;
   reveal: { answer: string; credit?: string } | null;
@@ -41,7 +44,7 @@ export interface ClientToServer {
   'room:create': (p: { name: string; key: string; packId: string; rounds: number }, ack: (r: JoinResult) => void) => void;
   'room:join': (p: { roomId: string; name: string; key: string }, ack: (r: JoinResult) => void) => void;
   'room:leave': () => void;
-  'game:start': (p: { rounds: number }) => void;
+  'game:start': (p: { rounds: number; chaos: boolean }) => void;
   'round:ready': () => void;
   'round:guess': (text: string, ack: (r: GuessResult) => void) => void;
   'round:skip': () => void;

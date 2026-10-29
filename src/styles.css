@@ -110,3 +110,6 @@ button.small { padding: 6px 10px; margin: 0; }
 
 .misses { list-style: none; padding: 0; color: var(--fail); }
 .summary pre { font-size: 1.2rem; line-height: 1.3; }
+.pack-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.check { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.check input { width: auto; }
