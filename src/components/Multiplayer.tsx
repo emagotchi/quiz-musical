@@ -1,13 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Pack } from '../types';
 import { FIRST_BONUS, type ChatMessage, type JoinResult, type PublicPlayer, type RoomState } from '../shared/protocol';
-import { PACKS, playableTracks } from '../data/packs';
-import { ATTEMPTS, ROUNDS_PER_GAME, chaosStart } from '../lib/scoring';
+import { answerOptions, buildPack, cleanSelection, type Selection } from '../data/packs';
+import { ATTEMPTS, chaosStart } from '../lib/scoring';
 import { playerKey, saveName, savedName, socket } from '../lib/socket';
 import { useClipPlayer } from '../lib/useClipPlayer';
 import { AttemptBar, Hints } from './AttemptBar';
 import { Chat, useChatMessages } from './Chat';
 import { GuessInput } from './GuessInput';
+import { PackPicker } from './PackPicker';
+import { SongList } from './SongList';
+import { rememberSelection, savedSelection } from '../lib/selection';
 
 interface Props {
   initialRoom: string | null;
@@ -18,17 +21,23 @@ interface Props {
 export function Multiplayer({ initialRoom, onExit }: Props) {
   const [name, setName] = useState(savedName);
   const [roomCode, setRoomCode] = useState(initialRoom ?? '');
-  const [packId, setPackId] = useState(PACKS[0].id);
   const [error, setError] = useState('');
   const [session, setSession] = useState<{ roomId: string; playerId: string } | null>(null);
   const [state, setState] = useState<RoomState | null>(null);
   const chat = useChatMessages();
 
   useEffect(() => {
+    const kicked = () => {
+      setSession(null);
+      setState(null);
+      setError('El anfitrión te sacó de la sala.');
+    };
     socket.on('room:state', setState);
+    socket.on('room:kicked', kicked);
     socket.connect();
     return () => {
       socket.off('room:state', setState);
+      socket.off('room:kicked', kicked);
       socket.emit('room:leave');
       socket.disconnect();
     };
@@ -64,16 +73,14 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
       else setError(r.error);
     };
     const s = socket.timeout(5000);
-    if (kind === 'create') s.emit('room:create', { name, key: playerKey, packId, rounds: ROUNDS_PER_GAME }, done);
+    if (kind === 'create') s.emit('room:create', { name, key: playerKey }, done);
     else s.emit('room:join', { roomId: roomCode.trim(), name, key: playerKey }, done);
   }
 
   if (session && state) {
-    const pack = PACKS.find((p) => p.id === state.packId) ?? PACKS[0];
     return (
       <Room
         state={state}
-        pack={pack}
         me={session.playerId}
         chat={chat.messages}
         onLeave={() => {
@@ -110,13 +117,7 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
         </div>
         <div className="stack">
           <h3>Crear sala</h3>
-          <select value={packId} onChange={(e) => setPackId(e.target.value)}>
-            {PACKS.map((p) => (
-              <option key={p.id} value={p.id} disabled={playableTracks(p).length === 0}>
-                {p.name}
-              </option>
-            ))}
-          </select>
+          <p className="muted">Las canciones se eligen dentro de la sala.</p>
           <button onClick={() => enter('create')}>Crear sala</button>
         </div>
       </div>
@@ -131,17 +132,14 @@ export function Multiplayer({ initialRoom, onExit }: Props) {
 
 interface RoomProps {
   state: RoomState;
-  pack: Pack;
   me: string;
   chat: ChatMessage[];
   onLeave: () => void;
 }
 
-function Room({ state, pack, me, chat, onLeave }: RoomProps) {
+function Room({ state, me, chat, onLeave }: RoomProps) {
   const isHost = state.hostId === me;
-  const [rounds, setRounds] = useState(state.rounds);
-  const [chaos, setChaos] = useState(state.chaos);
-  const maxRounds = Math.min(30, playableTracks(pack).length);
+  const pack = useMemo(() => buildPack(cleanSelection(state.selection)), [state.selection]);
 
   return (
     <div className="room">
@@ -162,23 +160,7 @@ function Room({ state, pack, me, chat, onLeave }: RoomProps) {
               <p className="muted">⚡ Quien adivine primero en cada ronda gana +{FIRST_BONUS} pts extra.</p>
               <CopyLink roomId={state.id} />
               {isHost ? (
-                <>
-                  <label className="field">
-                    Rondas
-                    <input
-                      type="number"
-                      min={1}
-                      max={maxRounds}
-                      value={rounds}
-                      onChange={(e) => setRounds(Number(e.target.value))}
-                    />
-                  </label>
-                  <label className="check">
-                    <input type="checkbox" checked={chaos} onChange={(e) => setChaos(e.target.checked)} />
-                    🎲 Modo caos: cada pista suena en un momento distinto de la canción
-                  </label>
-                  <button onClick={() => socket.emit('game:start', { rounds, chaos })}>Empezar partida</button>
-                </>
+                <HostSettings state={state} label="Empezar partida" />
               ) : (
                 <p className="muted">Esperando a que el anfitrión empiece…</p>
               )}
@@ -186,23 +168,25 @@ function Room({ state, pack, me, chat, onLeave }: RoomProps) {
           )}
 
           {(state.phase === 'loading' || state.phase === 'playing' || state.phase === 'reveal') && state.round && (
-            <RoundView state={state} pack={pack} me={me} />
+            <RoundView state={state} pack={pack} me={me} isHost={isHost} />
           )}
 
           {state.phase === 'finished' && (
-            <div className="panel stack">
-              <h2>🏆 {ranking(state.players)[0]?.name} gana</h2>
-              {isHost ? (
-                <button onClick={() => socket.emit('game:start', { rounds, chaos })}>Jugar de nuevo</button>
-              ) : (
-                <p className="muted">El anfitrión puede empezar otra partida.</p>
-              )}
-            </div>
+            <>
+              <FinalSummary state={state} me={me} />
+              <div className="panel stack">
+                {isHost ? (
+                  <HostSettings state={state} label="Jugar de nuevo" />
+                ) : (
+                  <p className="muted">El anfitrión puede empezar otra partida.</p>
+                )}
+              </div>
+            </>
           )}
         </div>
 
         <div className="room-side">
-          <Scoreboard state={state} me={me} />
+          <Scoreboard state={state} me={me} isHost={isHost} />
           <Chat messages={chat} me={me} />
         </div>
       </div>
@@ -210,7 +194,86 @@ function Room({ state, pack, me, chat, onLeave }: RoomProps) {
   );
 }
 
-function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: string }) {
+/** Songs, rounds and chaos mode, chosen by the host before each game. */
+function HostSettings({ state, label }: { state: RoomState; label: string }) {
+  const [selection, setSelection] = useState<Selection>(() =>
+    state.history.length ? cleanSelection(state.selection) : savedSelection(),
+  );
+  const [rounds, setRounds] = useState(state.rounds);
+  const [chaos, setChaos] = useState(state.chaos);
+  const available = buildPack(selection).tracks.length;
+  const maxRounds = Math.min(30, available);
+
+  return (
+    <>
+      <h3>Canciones</h3>
+      <PackPicker
+        value={selection}
+        onChange={(next) => {
+          setSelection(next);
+          rememberSelection(next);
+        }}
+      />
+      <label className="field">
+        Rondas
+        <input
+          type="number"
+          min={1}
+          max={maxRounds}
+          value={rounds}
+          onChange={(e) => setRounds(Number(e.target.value))}
+        />
+      </label>
+      <label className="check">
+        <input type="checkbox" checked={chaos} onChange={(e) => setChaos(e.target.checked)} />
+        🎲 Modo caos: cada pista suena en un momento distinto de la canción
+      </label>
+      <button
+        disabled={available === 0}
+        onClick={() => socket.emit('game:start', { rounds: Math.min(rounds, maxRounds), chaos, selection })}
+      >
+        {label}
+      </button>
+    </>
+  );
+}
+
+/** Podium plus every song of the game, with who got it. */
+function FinalSummary({ state, me }: { state: RoomState; me: string }) {
+  const podium = ranking(state.players).slice(0, 3);
+  const medals = ['🥇', '🥈', '🥉'];
+  return (
+    <div className="panel stack">
+      <h2>🏆 {podium[0]?.name} gana</h2>
+      <ol className="podium">
+        {podium.map((p, i) => (
+          <li key={p.id} className={`place-${i + 1} ${p.id === me ? 'me' : ''}`}>
+            <span className="medal">{medals[i]}</span>
+            <strong>{p.name}</strong>
+            <span className="muted">{p.score} pts</span>
+          </li>
+        ))}
+      </ol>
+      <h3>Canciones de la partida</h3>
+      <SongList
+        items={state.history.map((r) => {
+          const mine = r.results.find((x) => x.playerId === me);
+          const solvers = r.results.filter((x) => x.solved);
+          const first = r.results.find((x) => x.first);
+          return {
+            ...r,
+            mark: mine?.solved ? (mine.first ? '⚡' : '✓') : '✗',
+            detail: solvers.length
+              ? `${solvers.length}/${r.results.length} la sacaron${first ? ` · ⚡ ${first.name}` : ''}`
+              : 'Nadie la sacó',
+          };
+        })}
+      />
+    </div>
+  );
+}
+
+function RoundView({ state, pack, me, isHost }: { state: RoomState; pack: Pack; me: string; isHost: boolean }) {
   const round = state.round!;
   const self = state.players.find((p) => p.id === me);
   const attempt = self?.attempt ?? 0;
@@ -224,10 +287,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
     onError: () => socket.emit('round:ready'),
   });
 
-  const options = useMemo(
-    () => [...new Set(pack.tracks.map((t) => t.answer))].sort((a, b) => a.localeCompare(b, 'es')),
-    [pack],
-  );
+  const options = useMemo(() => answerOptions(pack), [pack]);
   const clipAt = (i: number) =>
     round.spots ? chaosStart(round.spots[i], ATTEMPTS[i].seconds, player.duration()) : round.start;
 
@@ -263,6 +323,16 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
       <div className={`video-box ${revealed ? 'visible' : 'hidden'}`} ref={player.hostRef} />
 
       {state.phase === 'loading' && <p className="muted">Cargando canción…</p>}
+
+      {isHost && (state.phase === 'loading' || state.phase === 'playing') && (
+        <button
+          className="secondary small host-skip"
+          title="Termina la ronda para todos, por ejemplo si el video no carga"
+          onClick={() => window.confirm('¿Terminar esta ronda para todos?') && socket.emit('host:skip')}
+        >
+          👑 Terminar ronda
+        </button>
+      )}
 
       {playing && myStatus === 'guessing' && (
         <>
@@ -323,7 +393,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
   );
 }
 
-function Scoreboard({ state, me }: { state: RoomState; me: string }) {
+function Scoreboard({ state, me, isHost }: { state: RoomState; me: string; isHost: boolean }) {
   const inRound = state.phase === 'playing' || state.phase === 'reveal';
   return (
     <aside className="panel scoreboard">
@@ -341,6 +411,16 @@ function Scoreboard({ state, me }: { state: RoomState; me: string }) {
               </span>
             )}
             <span className="score">{p.score}</span>
+            {isHost && p.id !== me && (
+              <button
+                className="kick"
+                title={`Sacar a ${p.name} de la sala`}
+                aria-label={`Sacar a ${p.name}`}
+                onClick={() => window.confirm(`¿Sacar a ${p.name} de la sala?`) && socket.emit('host:kick', p.id)}
+              >
+                ✕
+              </button>
+            )}
           </li>
         ))}
       </ol>

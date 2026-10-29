@@ -1,4 +1,5 @@
 import type { Hint } from '../types';
+import type { Selection } from '../data/packs';
 
 export type Phase = 'lobby' | 'loading' | 'playing' | 'reveal' | 'finished';
 export type PlayerStatus = 'guessing' | 'solved' | 'failed';
@@ -28,16 +29,26 @@ export interface RoundInfo {
   remainingMs: number | null;
 }
 
+/** One played round, for the end-of-game summary. */
+export interface RoundRecap {
+  answer: string;
+  credit?: string;
+  youtubeId: string;
+  results: { playerId: string; name: string; points: number; first: boolean; solved: boolean }[];
+}
+
 export interface RoomState {
   id: string;
   hostId: string;
-  packId: string;
+  selection: Selection;
   phase: Phase;
   rounds: number;
   chaos: boolean;
   players: PublicPlayer[];
   round: RoundInfo | null;
   reveal: { answer: string; credit?: string } | null;
+  /** Rounds played so far in this game. */
+  history: RoundRecap[];
 }
 
 export interface ChatMessage {
@@ -55,10 +66,14 @@ export type JoinResult = { ok: true; roomId: string; playerId: string } | { ok: 
 export type GuessResult = { correct: boolean };
 
 export interface ClientToServer {
-  'room:create': (p: { name: string; key: string; packId: string; rounds: number }, ack: (r: JoinResult) => void) => void;
+  'room:create': (p: { name: string; key: string }, ack: (r: JoinResult) => void) => void;
   'room:join': (p: { roomId: string; name: string; key: string }, ack: (r: JoinResult) => void) => void;
   'room:leave': () => void;
-  'game:start': (p: { rounds: number; chaos: boolean }) => void;
+  'game:start': (p: { rounds: number; chaos: boolean; selection: Selection }) => void;
+  /** Host only: remove a player (they can't rejoin this room). */
+  'host:kick': (playerId: string) => void;
+  /** Host only: end the current round now (e.g. a video that won't load). */
+  'host:skip': () => void;
   'round:ready': () => void;
   'round:guess': (text: string, ack: (r: GuessResult) => void) => void;
   'round:skip': () => void;
@@ -67,6 +82,7 @@ export interface ClientToServer {
 
 export interface ServerToClient {
   'room:state': (state: RoomState) => void;
+  'room:kicked': () => void;
   'chat:message': (message: ChatMessage) => void;
   /** Spoiler messages of the round that just ended, now safe to show. */
   'chat:reveal': (messages: { id: number; text: string }[]) => void;

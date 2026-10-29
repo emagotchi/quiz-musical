@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useVolume } from './volume';
 
 let apiPromise: Promise<void> | null = null;
 
@@ -29,6 +30,12 @@ export function useClipPlayer(callbacks: { onError: (code: number) => void; onCu
   callbacksRef.current = callbacks;
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const volume = useVolume();
+
+  // Phones may ignore this (iOS only obeys the hardware buttons).
+  useEffect(() => {
+    if (ready) playerRef.current?.setVolume(volume);
+  }, [ready, volume]);
 
   useEffect(() => {
     let cancelled = false;

@@ -27,4 +27,8 @@ export interface Pack {
   answerLabel: string;
   guessPlaceholder: string;
   tracks: Track[];
+  /** Hint label whose values split the pack into filterable groups ("Proyecto", "Tipo"). */
+  groupBy?: string;
+  /** Autocomplete options when they differ from the tracks' answers (a filtered pack still suggests every name). */
+  answers?: string[];
 }

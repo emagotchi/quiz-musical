@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { extname, join, normalize as normalizePath } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { Server, type Socket } from 'socket.io';
-import { PACKS, playableTracks } from '../src/data/packs';
+import { DEFAULT_SELECTION, buildPack, cleanSelection, type Selection } from '../src/data/packs';
 import { ATTEMPTS, chaosSpots, isCorrect, normalize, pickTracks } from '../src/lib/scoring';
 import type { Pack, Track } from '../src/types';
 import {
@@ -16,6 +16,7 @@ import {
   type Phase,
   type PlayerStatus,
   type RoomState,
+  type RoundRecap,
   type ServerToClient,
 } from '../src/shared/protocol';
 
@@ -37,6 +38,7 @@ interface Player {
 interface Room {
   id: string;
   hostId: string;
+  selection: Selection;
   pack: Pack;
   rounds: number;
   chaos: boolean;
@@ -51,6 +53,9 @@ interface Room {
   cleanup: NodeJS.Timeout | null;
   /** Chat messages hidden during this round because they contain the answer. */
   spoilers: { id: number; text: string }[];
+  history: RoundRecap[];
+  /** Keys of kicked players. */
+  banned: Set<string>;
 }
 
 type GameSocket = Socket<ClientToServer, ServerToClient, object, { roomId?: string; playerId?: string }>;
@@ -65,8 +70,7 @@ const randomId = (len: number, alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ') =>
   Array.from({ length: len }, () => alphabet[Math.floor(Math.random() * alphabet.length)]).join('');
 
 const cleanName = (name: unknown) => String(name ?? '').trim().slice(0, 20) || 'Anónimo';
-const clampRounds = (n: unknown, pack: Pack) =>
-  Math.max(1, Math.min(Number(n) || 10, MAX_ROUNDS, playableTracks(pack).length));
+const clampRounds = (n: unknown, pack: Pack) => Math.max(1, Math.min(Number(n) || 10, MAX_ROUNDS, pack.tracks.length));
 
 function connectedPlayers(room: Room) {
   return [...room.players.values()].filter((p) => p.socketId);
@@ -78,7 +82,7 @@ function snapshot(room: Room): RoomState {
   return {
     id: room.id,
     hostId: room.hostId,
-    packId: room.pack.id,
+    selection: room.selection,
     phase: room.phase,
     rounds: room.rounds,
     chaos: room.chaos,
@@ -105,6 +109,7 @@ function snapshot(room: Room): RoomState {
           }
         : null,
     reveal: room.phase === 'reveal' && track ? { answer: track.answer, credit: track.credit } : null,
+    history: room.history,
   };
 }
 
@@ -117,10 +122,13 @@ function schedule(room: Room, seconds: number, fn: () => void) {
   room.timer = setTimeout(fn, seconds * 1000);
 }
 
-function startGame(room: Room, rounds: number, chaos: boolean) {
+function startGame(room: Room, rounds: number, chaos: boolean, selection: Selection) {
+  const pack = buildPack(selection);
+  if (pack.tracks.length > 0) Object.assign(room, { selection, pack });
   room.rounds = clampRounds(rounds, room.pack);
   room.chaos = chaos;
-  room.queue = pickTracks(playableTracks(room.pack), room.rounds);
+  room.history = [];
+  room.queue = pickTracks(room.pack.tracks, room.rounds);
   room.roundIndex = 0;
   for (const p of room.players.values()) p.score = 0;
   startRound(room);
@@ -161,6 +169,19 @@ function endRound(room: Room) {
   room.spoilers = [];
   room.endsAt = null;
   for (const p of room.players.values()) if (p.status === 'guessing') p.status = 'failed';
+  const track = room.queue[room.roundIndex];
+  room.history.push({
+    answer: track.answer,
+    credit: track.credit,
+    youtubeId: track.youtubeId,
+    results: [...room.players.values()].map((p) => ({
+      playerId: p.id,
+      name: p.name,
+      points: p.roundPoints,
+      first: p.first,
+      solved: p.status === 'solved',
+    })),
+  });
   schedule(room, REVEAL_SECONDS, () => {
     room.roundIndex++;
     if (room.roundIndex < room.queue.length) startRound(room);
@@ -269,17 +290,17 @@ const io = new Server<ClientToServer, ServerToClient>(http, {
 });
 
 io.on('connection', (socket: GameSocket) => {
-  socket.on('room:create', ({ name, key, packId, rounds }, ack) => {
-    const pack = PACKS.find((p) => p.id === packId);
-    if (!pack || playableTracks(pack).length === 0) return ack({ ok: false, error: 'Pack no disponible.' });
+  socket.on('room:create', ({ name, key }, ack) => {
+    const pack = buildPack(DEFAULT_SELECTION);
     leave(socket);
     let id = randomId(4);
     while (rooms.has(id)) id = randomId(4);
     const room: Room = {
       id,
       hostId: '',
+      selection: DEFAULT_SELECTION,
       pack,
-      rounds: clampRounds(rounds, pack),
+      rounds: clampRounds(10, pack),
       chaos: false,
       spots: null,
       phase: 'lobby',
@@ -290,6 +311,8 @@ io.on('connection', (socket: GameSocket) => {
       timer: null,
       cleanup: null,
       spoilers: [],
+      history: [],
+      banned: new Set(),
     };
     rooms.set(id, room);
     const player = seat(socket, room, cleanName(name), String(key));
@@ -299,6 +322,7 @@ io.on('connection', (socket: GameSocket) => {
   socket.on('room:join', ({ roomId, name, key }, ack) => {
     const room = rooms.get(String(roomId).toUpperCase());
     if (!room) return ack({ ok: false, error: 'La sala no existe.' });
+    if (room.banned.has(String(key))) return ack({ ok: false, error: 'El anfitrión te sacó de esta sala.' });
     leave(socket);
     const player = seat(socket, room, cleanName(name), String(key));
     ack({ ok: true, roomId: room.id, playerId: player.id });
@@ -313,10 +337,10 @@ io.on('connection', (socket: GameSocket) => {
     return room && player ? { room, player } : null;
   };
 
-  socket.on('game:start', ({ rounds, chaos }) => {
+  socket.on('game:start', ({ rounds, chaos, selection }) => {
     const c = current();
     if (!c || c.room.hostId !== c.player.id) return;
-    if (c.room.phase === 'lobby' || c.room.phase === 'finished') startGame(c.room, rounds, Boolean(chaos));
+    if (c.room.phase === 'lobby' || c.room.phase === 'finished') startGame(c.room, rounds, Boolean(chaos), cleanSelection(selection));
   });
 
   socket.on('round:ready', () => {
@@ -342,6 +366,31 @@ io.on('connection', (socket: GameSocket) => {
     ack({ correct });
     checkRoundOver(room);
     broadcast(room);
+  });
+
+  socket.on('host:kick', (playerId) => {
+    const c = current();
+    const target = c?.room.players.get(String(playerId));
+    if (!c || !target || c.room.hostId !== c.player.id || target.id === c.player.id) return;
+    const { room } = c;
+    room.banned.add(target.key);
+    room.players.delete(target.id);
+    const targetSocket = target.socketId ? io.sockets.sockets.get(target.socketId) : undefined;
+    if (targetSocket) {
+      targetSocket.leave(room.id);
+      targetSocket.data.roomId = targetSocket.data.playerId = undefined;
+      targetSocket.emit('room:kicked');
+    }
+    checkAllReady(room);
+    checkRoundOver(room);
+    broadcast(room);
+  });
+
+  socket.on('host:skip', () => {
+    const c = current();
+    if (!c || c.room.hostId !== c.player.id) return;
+    if (c.room.phase === 'loading') c.room.phase = 'playing';
+    endRound(c.room);
   });
 
   socket.on('chat:send', (raw) => {

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { answerOptions } from '../data/packs';
 import type { Pack, Track } from '../types';
 import { ATTEMPTS, chaosSpots, chaosStart, isCorrect } from '../lib/scoring';
 import { useClipPlayer } from '../lib/useClipPlayer';
@@ -17,15 +18,22 @@ interface Props {
   tracks: Track[];
   /** Every attempt plays a different random part of the song. */
   chaos: boolean;
+  /** Resume a round at this attempt (the daily challenge survives reloads). */
+  initialAttempt?: number;
+  onAttempt?: (attempt: number) => void;
+  /** Called as soon as a round is decided, before the player moves on. */
+  onRoundEnd?: (result: RoundResult) => void;
+  /** Replaces "Ronda x/y" in the header. */
+  heading?: string;
   onFinish: (results: RoundResult[]) => void;
 }
 
 type Miss = { kind: 'wrong'; guess: string } | { kind: 'skip' };
 
-export function Game({ pack, tracks, chaos, onFinish }: Props) {
+export function Game({ pack, tracks, chaos, initialAttempt = 0, onAttempt, onRoundEnd, heading, onFinish }: Props) {
   const [queue, setQueue] = useState(tracks);
   const [round, setRound] = useState(0);
-  const [attempt, setAttempt] = useState(0);
+  const [attempt, setAttempt] = useState(initialAttempt);
   const [misses, setMisses] = useState<Miss[]>([]);
   const [revealed, setRevealed] = useState(false);
   const [results, setResults] = useState<RoundResult[]>([]);
@@ -42,10 +50,7 @@ export function Game({ pack, tracks, chaos, onFinish }: Props) {
   const spots = useMemo(() => (chaos ? chaosSpots() : null), [chaos, round, track?.id]);
   const clipAt = (i: number) => (spots ? chaosStart(spots[i], ATTEMPTS[i].seconds, player.duration()) : track.start);
 
-  const options = useMemo(
-    () => [...new Set(pack.tracks.map((t) => t.answer))].sort((a, b) => a.localeCompare(b, 'es')),
-    [pack],
-  );
+  const options = useMemo(() => answerOptions(pack), [pack]);
 
   useEffect(() => {
     if (player.ready && track) player.load(track.youtubeId, track.start);
@@ -61,7 +66,9 @@ export function Game({ pack, tracks, chaos, onFinish }: Props) {
   const step = ATTEMPTS[attempt];
 
   function finishRound(solvedAt: number | null) {
-    setResults((r) => [...r, { track, solvedAt, points: solvedAt === null ? 0 : ATTEMPTS[solvedAt].points }]);
+    const result = { track, solvedAt, points: solvedAt === null ? 0 : ATTEMPTS[solvedAt].points };
+    setResults((r) => [...r, result]);
+    onRoundEnd?.(result);
     setRevealed(true);
     player.playFrom(track.start);
   }
@@ -70,6 +77,7 @@ export function Game({ pack, tracks, chaos, onFinish }: Props) {
     setMisses((ms) => [...ms, m]);
     if (attempt + 1 >= ATTEMPTS.length) return finishRound(null);
     setAttempt(attempt + 1);
+    onAttempt?.(attempt + 1);
     player.playClip(clipAt(attempt + 1), ATTEMPTS[attempt + 1].seconds);
   }
 
@@ -91,9 +99,7 @@ export function Game({ pack, tracks, chaos, onFinish }: Props) {
   return (
     <div className="game">
       <header className="game-header">
-        <span>
-          Ronda {round + 1}/{queue.length}
-        </span>
+        <span>{heading ?? `Ronda ${round + 1}/${queue.length}`}</span>
         {chaos && <span>🎲 Caos</span>}
         <span>{total} pts</span>
       </header>
