@@ -21,7 +21,7 @@
           "value": "D_____   B___   _"
         }
       ],
-      "credit": "Dragon Ball Z — Opening 2"
+      "credit": "Dragon Ball Z - Opening 2"
     },
     {
       "id": "dragon-ball-opening",
@@ -39,7 +39,7 @@
           "value": "D_____   B___"
         }
       ],
-      "credit": "Dragon Ball — Opening"
+      "credit": "Dragon Ball - Opening"
     },
     {
       "id": "dragon-ball-ending",
@@ -57,7 +57,7 @@
           "value": "D_____   B___"
         }
       ],
-      "credit": "Dragon Ball — Ending"
+      "credit": "Dragon Ball - Ending"
     },
     {
       "id": "dragon-ball-z-ending",
@@ -75,7 +75,7 @@
           "value": "D_____   B___   _"
         }
       ],
-      "credit": "Dragon Ball Z — Ending"
+      "credit": "Dragon Ball Z - Ending"
     },
     {
       "id": "dragon-ball-z-ending-2",
@@ -93,7 +93,7 @@
           "value": "D_____   B___   _"
         }
       ],
-      "credit": "Dragon Ball Z — Ending 2"
+      "credit": "Dragon Ball Z - Ending 2"
     },
     {
       "id": "dragon-ball-gt-opening",
@@ -111,7 +111,7 @@
           "value": "D_____   B___   __"
         }
       ],
-      "credit": "Dragon Ball GT — Opening"
+      "credit": "Dragon Ball GT - Opening"
     },
     {
       "id": "dragon-ball-gt-ending",
@@ -129,7 +129,7 @@
           "value": "D_____   B___   __"
         }
       ],
-      "credit": "Dragon Ball GT — Ending"
+      "credit": "Dragon Ball GT - Ending"
     },
     {
       "id": "ranma-1-2-ending",
@@ -147,7 +147,7 @@
           "value": "R____   1/_"
         }
       ],
-      "credit": "Ranma 1/2 — Ending"
+      "credit": "Ranma 1/2 - Ending"
     },
     {
       "id": "sailor-moon-opening",
@@ -165,7 +165,7 @@
           "value": "S_____   M___"
         }
       ],
-      "credit": "Sailor Moon — Opening"
+      "credit": "Sailor Moon - Opening"
     },
     {
       "id": "sailor-moon-ending",
@@ -183,7 +183,7 @@
           "value": "S_____   M___"
         }
       ],
-      "credit": "Sailor Moon — Ending"
+      "credit": "Sailor Moon - Ending"
     },
     {
       "id": "sakura-card-captor-opening",
@@ -201,7 +201,7 @@
           "value": "S_____   C___   C_____"
         }
       ],
-      "credit": "Sakura Card Captor — Opening"
+      "credit": "Sakura Card Captor - Opening"
     },
     {
       "id": "sakura-card-captor-ending",
@@ -219,7 +219,7 @@
           "value": "S_____   C___   C_____"
         }
       ],
-      "credit": "Sakura Card Captor — Ending"
+      "credit": "Sakura Card Captor - Ending"
     },
     {
       "id": "digimon-adventure-opening",
@@ -237,7 +237,7 @@
           "value": "D______   A________"
         }
       ],
-      "credit": "Digimon Adventure — Opening"
+      "credit": "Digimon Adventure - Opening"
     },
     {
       "id": "digimon-adventure-ending",
@@ -255,7 +255,7 @@
           "value": "D______   A________"
         }
       ],
-      "credit": "Digimon Adventure — Ending"
+      "credit": "Digimon Adventure - Ending"
     },
     {
       "id": "digimon-tamers-opening",
@@ -273,7 +273,7 @@
           "value": "D______   T_____"
         }
       ],
-      "credit": "Digimon Tamers — Opening"
+      "credit": "Digimon Tamers - Opening"
     },
     {
       "id": "digimon-tamers-ending",
@@ -291,7 +291,7 @@
           "value": "D______   T_____"
         }
       ],
-      "credit": "Digimon Tamers — Ending"
+      "credit": "Digimon Tamers - Ending"
     },
     {
       "id": "digimon-adventure-02-opening",
@@ -309,7 +309,7 @@
           "value": "D______   A________   0_"
         }
       ],
-      "credit": "Digimon Adventure 02 — Opening"
+      "credit": "Digimon Adventure 02 - Opening"
     },
     {
       "id": "super-campeones-opening",
@@ -327,7 +327,7 @@
           "value": "S____   C________"
         }
       ],
-      "credit": "Super Campeones — Opening"
+      "credit": "Super Campeones - Opening"
     },
     {
       "id": "saint-seiya-opening-1",
@@ -348,7 +348,7 @@
           "value": "S____   S____"
         }
       ],
-      "credit": "Saint Seiya — Opening 1"
+      "credit": "Saint Seiya - Opening 1"
     },
     {
       "id": "saint-seiya-ending-1",
@@ -358,7 +358,7 @@
         "Los Caballeros del Zodiaco"
       ],
       "youtubeId": "5M16xIO8P3M",
-      "start": 0,
+      "start": 6,
       "hints": [
         {
           "label": "Tipo",
@@ -369,7 +369,7 @@
           "value": "S____   S____"
         }
       ],
-      "credit": "Saint Seiya — Ending 1"
+      "credit": "Saint Seiya - Ending 1"
     },
     {
       "id": "candy-candy-opening",
@@ -387,7 +387,7 @@
           "value": "C____   C____"
         }
       ],
-      "credit": "Candy Candy — Opening"
+      "credit": "Candy Candy - Opening"
     },
     {
       "id": "candy-candy-ending",
@@ -405,7 +405,7 @@
           "value": "C____   C____"
         }
       ],
-      "credit": "Candy Candy — Ending"
+      "credit": "Candy Candy - Ending"
     },
     {
       "id": "heidi-ghux-vkr7xc",
@@ -451,7 +451,7 @@
           "value": "M________   B__"
         }
       ],
-      "credit": "Marmalade Boy — Opening"
+      "credit": "Marmalade Boy - Opening"
     },
     {
       "id": "marmalade-boy-ending",
@@ -469,7 +469,7 @@
           "value": "M________   B__"
         }
       ],
-      "credit": "Marmalade Boy — Ending"
+      "credit": "Marmalade Boy - Ending"
     },
     {
       "id": "dr-slump-opening",
@@ -490,7 +490,7 @@
           "value": "D_.   S____"
         }
       ],
-      "credit": "Dr. Slump — Opening"
+      "credit": "Dr. Slump - Opening"
     },
     {
       "id": "kinnikuman-opening",
@@ -508,7 +508,7 @@
           "value": "K_________"
         }
       ],
-      "credit": "Kinnikuman — Opening"
+      "credit": "Kinnikuman - Opening"
     },
     {
       "id": "escuela-de-detectives-opening",
@@ -526,7 +526,7 @@
           "value": "E______   d_   D_________"
         }
       ],
-      "credit": "Escuela de Detectives — Opening"
+      "credit": "Escuela de Detectives - Opening"
     },
     {
       "id": "escuela-de-detectives-ending",
@@ -544,7 +544,7 @@
           "value": "E______   d_   D_________"
         }
       ],
-      "credit": "Escuela de Detectives — Ending"
+      "credit": "Escuela de Detectives - Ending"
     },
     {
       "id": "pokemon-opening-1",
@@ -562,7 +562,7 @@
           "value": "P______"
         }
       ],
-      "credit": "Pokémon — Opening 1"
+      "credit": "Pokémon - Opening 1"
     },
     {
       "id": "shaman-king-opening",
@@ -580,7 +580,7 @@
           "value": "S_____   K___"
         }
       ],
-      "credit": "Shaman King — Opening"
+      "credit": "Shaman King - Opening"
     },
     {
       "id": "pokemon-opening-3",
@@ -598,7 +598,7 @@
           "value": "P______"
         }
       ],
-      "credit": "Pokémon — Opening 3"
+      "credit": "Pokémon - Opening 3"
     },
     {
       "id": "nube-opening",
@@ -616,7 +616,7 @@
           "value": "N___"
         }
       ],
-      "credit": "Nube — Opening"
+      "credit": "Nube - Opening"
     },
     {
       "id": "cazador-x-opening",
@@ -634,7 +634,7 @@
           "value": "C______   X"
         }
       ],
-      "credit": "Cazador X — Opening"
+      "credit": "Cazador X - Opening"
     },
     {
       "id": "cazador-x-ending",
@@ -652,7 +652,7 @@
           "value": "C______   X"
         }
       ],
-      "credit": "Cazador X — Ending"
+      "credit": "Cazador X - Ending"
     },
     {
       "id": "inuyasha-opening-1",
@@ -670,7 +670,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Opening 1"
+      "credit": "Inuyasha - Opening 1"
     },
     {
       "id": "inuyasha-opening-2",
@@ -688,7 +688,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Opening 2"
+      "credit": "Inuyasha - Opening 2"
     },
     {
       "id": "inuyasha-opening-5",
@@ -706,7 +706,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Opening 5"
+      "credit": "Inuyasha - Opening 5"
     },
     {
       "id": "inuyasha-opening-4",
@@ -724,7 +724,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Opening 4"
+      "credit": "Inuyasha - Opening 4"
     },
     {
       "id": "inuyasha-opening-3",
@@ -742,7 +742,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Opening 3"
+      "credit": "Inuyasha - Opening 3"
     },
     {
       "id": "inuyasha-ending-7",
@@ -760,7 +760,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Ending 7"
+      "credit": "Inuyasha - Ending 7"
     },
     {
       "id": "inuyasha-ending-5",
@@ -778,7 +778,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Ending 5"
+      "credit": "Inuyasha - Ending 5"
     },
     {
       "id": "inuyasha-ending-4",
@@ -796,7 +796,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Ending 4"
+      "credit": "Inuyasha - Ending 4"
     },
     {
       "id": "inuyasha-ending-3",
@@ -814,7 +814,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Ending 3"
+      "credit": "Inuyasha - Ending 3"
     },
     {
       "id": "inuyasha-ending-2",
@@ -832,7 +832,7 @@
           "value": "I_______"
         }
       ],
-      "credit": "Inuyasha — Ending 2"
+      "credit": "Inuyasha - Ending 2"
     },
     {
       "id": "hamtaro-opening",
@@ -850,7 +850,7 @@
           "value": "H______"
         }
       ],
-      "credit": "Hamtaro — Opening"
+      "credit": "Hamtaro - Opening"
     },
     {
       "id": "hamtaro-ending",
@@ -868,7 +868,7 @@
           "value": "H______"
         }
       ],
-      "credit": "Hamtaro — Ending"
+      "credit": "Hamtaro - Ending"
     },
     {
       "id": "zoids-opening",
@@ -886,7 +886,7 @@
           "value": "Z____"
         }
       ],
-      "credit": "Zoids — Opening"
+      "credit": "Zoids - Opening"
     },
     {
       "id": "detective-conan-opening",
@@ -904,7 +904,7 @@
           "value": "D________   C____"
         }
       ],
-      "credit": "Detective Conan — Opening"
+      "credit": "Detective Conan - Opening"
     },
     {
       "id": "shaman-king-ending",
@@ -922,7 +922,7 @@
           "value": "S_____   K___"
         }
       ],
-      "credit": "Shaman King — Ending"
+      "credit": "Shaman King - Ending"
     },
     {
       "id": "shaman-king-opening-2",
@@ -940,7 +940,7 @@
           "value": "S_____   K___"
         }
       ],
-      "credit": "Shaman King — Opening"
+      "credit": "Shaman King - Opening"
     },
     {
       "id": "shaman-king-ending-2",
@@ -958,7 +958,7 @@
           "value": "S_____   K___"
         }
       ],
-      "credit": "Shaman King — Ending 2"
+      "credit": "Shaman King - Ending 2"
     },
     {
       "id": "shaman-king-opening-2-2",
@@ -976,7 +976,7 @@
           "value": "S_____   K___"
         }
       ],
-      "credit": "Shaman King — Opening 2"
+      "credit": "Shaman King - Opening 2"
     },
     {
       "id": "slam-dunk-opening",
@@ -994,7 +994,7 @@
           "value": "S___   D___"
         }
       ],
-      "credit": "Slam Dunk — Opening"
+      "credit": "Slam Dunk - Opening"
     },
     {
       "id": "slam-dunk-ending",
@@ -1012,7 +1012,7 @@
           "value": "S___   D___"
         }
       ],
-      "credit": "Slam Dunk — Ending"
+      "credit": "Slam Dunk - Ending"
     },
     {
       "id": "slayers-opening",
@@ -1033,7 +1033,7 @@
           "value": "S______"
         }
       ],
-      "credit": "Slayers — Opening"
+      "credit": "Slayers - Opening"
     },
     {
       "id": "slayers-ending",
@@ -1054,7 +1054,7 @@
           "value": "S______"
         }
       ],
-      "credit": "Slayers — Ending"
+      "credit": "Slayers - Ending"
     },
     {
       "id": "yu-yu-hakusho-opening",
@@ -1072,7 +1072,7 @@
           "value": "Y_   Y_   H______"
         }
       ],
-      "credit": "Yu Yu Hakusho — Opening"
+      "credit": "Yu Yu Hakusho - Opening"
     },
     {
       "id": "yu-yu-hakusho-ending",
@@ -1090,7 +1090,7 @@
           "value": "Y_   Y_   H______"
         }
       ],
-      "credit": "Yu Yu Hakusho — Ending"
+      "credit": "Yu Yu Hakusho - Ending"
     },
     {
       "id": "kaleido-star-opening",
@@ -1108,7 +1108,7 @@
           "value": "K______   S___"
         }
       ],
-      "credit": "Kaleido Star — Opening"
+      "credit": "Kaleido Star - Opening"
     },
     {
       "id": "beyblade-opening",
@@ -1126,7 +1126,7 @@
           "value": "B_______"
         }
       ],
-      "credit": "Beyblade — Opening"
+      "credit": "Beyblade - Opening"
     },
     {
       "id": "ranma-1-2-opening",
@@ -1144,7 +1144,7 @@
           "value": "R____   1/_"
         }
       ],
-      "credit": "Ranma 1/2 — Opening"
+      "credit": "Ranma 1/2 - Opening"
     },
     {
       "id": "samurai-x-opening",
@@ -1162,7 +1162,7 @@
           "value": "S______   X"
         }
       ],
-      "credit": "Samurai X — Opening"
+      "credit": "Samurai X - Opening"
     },
     {
       "id": "mikami-opening",
@@ -1180,7 +1180,7 @@
           "value": "M_____"
         }
       ],
-      "credit": "Mikami — Opening"
+      "credit": "Mikami - Opening"
     },
     {
       "id": "mirmo-zibang-opening",
@@ -1198,7 +1198,7 @@
           "value": "M____   Z_____"
         }
       ],
-      "credit": "Mirmo Zibang — Opening"
+      "credit": "Mirmo Zibang - Opening"
     },
     {
       "id": "magical-doremi-opening",
@@ -1216,7 +1216,7 @@
           "value": "M______   D_____"
         }
       ],
-      "credit": "Magical Doremi — Opening"
+      "credit": "Magical Doremi - Opening"
     },
     {
       "id": "koni-chan-opening",
@@ -1234,7 +1234,7 @@
           "value": "K___   C___"
         }
       ],
-      "credit": "Koni Chan — Opening"
+      "credit": "Koni Chan - Opening"
     },
     {
       "id": "eyeshield-21-opening",
@@ -1252,14 +1252,14 @@
           "value": "E________   2_"
         }
       ],
-      "credit": "Eyeshield 21 — Opening"
+      "credit": "Eyeshield 21 - Opening"
     },
     {
       "id": "monster-rancher-opening",
       "answer": "Monster Rancher",
       "aliases": [],
       "youtubeId": "eaRZwCpWGSQ",
-      "start": 0,
+      "start": 3,
       "hints": [
         {
           "label": "Tipo",
@@ -1270,7 +1270,7 @@
           "value": "M______   R______"
         }
       ],
-      "credit": "Monster Rancher — Opening"
+      "credit": "Monster Rancher - Opening"
     },
     {
       "id": "doraemon-opening",
@@ -1288,7 +1288,7 @@
           "value": "D_______"
         }
       ],
-      "credit": "Doraemon — Opening"
+      "credit": "Doraemon - Opening"
     },
     {
       "id": "zenki-opening",
@@ -1306,7 +1306,7 @@
           "value": "Z____"
         }
       ],
-      "credit": "Zenki — Opening"
+      "credit": "Zenki - Opening"
     },
     {
       "id": "31-minutos-opening",
@@ -1324,7 +1324,7 @@
           "value": "3_   m______"
         }
       ],
-      "credit": "31 minutos — Opening"
+      "credit": "31 minutos - Opening"
     }
   ]
 }

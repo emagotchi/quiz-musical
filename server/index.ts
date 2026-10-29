@@ -8,6 +8,7 @@ import { ATTEMPTS, chaosSpots, isCorrect, normalize, pickTracks } from '../src/l
 import type { Pack, Track } from '../src/types';
 import {
   CHAT_MAX_LENGTH,
+  FIRST_BONUS,
   LOAD_TIMEOUT_SECONDS,
   REVEAL_SECONDS,
   ROUND_SECONDS,
@@ -28,6 +29,7 @@ interface Player {
   attempt: number;
   status: PlayerStatus;
   roundPoints: number;
+  first: boolean;
   ready: boolean;
   lastChatAt: number;
 }
@@ -87,6 +89,7 @@ function snapshot(room: Room): RoomState {
       attempt: p.attempt,
       status: p.status,
       roundPoints: p.roundPoints,
+      first: p.first,
       connected: p.socketId !== null,
     })),
     round:
@@ -127,7 +130,7 @@ function startRound(room: Room) {
   room.phase = 'loading';
   room.endsAt = null;
   room.spots = room.chaos ? chaosSpots() : null;
-  for (const p of room.players.values()) Object.assign(p, { attempt: 0, status: 'guessing', roundPoints: 0, ready: false });
+  for (const p of room.players.values()) Object.assign(p, { attempt: 0, status: 'guessing', roundPoints: 0, first: false, ready: false });
   schedule(room, LOAD_TIMEOUT_SECONDS, () => beginPlaying(room));
   broadcast(room);
 }
@@ -196,6 +199,7 @@ function seat(socket: GameSocket, room: Room, name: string, key: string) {
       // Late joiners sit out the current round.
       status: room.phase === 'lobby' || room.phase === 'finished' ? 'guessing' : 'failed',
       roundPoints: 0,
+      first: false,
       ready: true,
       lastChatAt: 0,
     };
@@ -329,8 +333,9 @@ io.on('connection', (socket: GameSocket) => {
     const track = room.queue[room.roundIndex];
     const correct = isCorrect(String(text).slice(0, 100), track);
     if (correct) {
+      player.first = [...room.players.values()].every((p) => p.status !== 'solved');
       player.status = 'solved';
-      player.roundPoints = ATTEMPTS[player.attempt].points;
+      player.roundPoints = ATTEMPTS[player.attempt].points + (player.first ? FIRST_BONUS : 0);
       player.score += player.roundPoints;
     } else if (player.attempt + 1 >= ATTEMPTS.length) player.status = 'failed';
     else player.attempt++;

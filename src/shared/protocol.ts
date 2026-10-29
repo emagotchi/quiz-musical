@@ -9,7 +9,10 @@ export interface PublicPlayer {
   score: number;
   attempt: number;
   status: PlayerStatus;
+  /** Points won this round, bonus included. */
   roundPoints: number;
+  /** First to guess this round (got FIRST_BONUS). */
+  first: boolean;
   connected: boolean;
 }
 
@@ -70,5 +73,7 @@ export interface ServerToClient {
 }
 
 export const ROUND_SECONDS = 90;
+/** Extra points for the first player who guesses each round. */
+export const FIRST_BONUS = 20;
 export const REVEAL_SECONDS = 10;
 export const LOAD_TIMEOUT_SECONDS = 8;

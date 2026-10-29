@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Pack } from '../types';
-import type { ChatMessage, JoinResult, PublicPlayer, RoomState } from '../shared/protocol';
+import { FIRST_BONUS, type ChatMessage, type JoinResult, type PublicPlayer, type RoomState } from '../shared/protocol';
 import { PACKS, playableTracks } from '../data/packs';
 import { ATTEMPTS, ROUNDS_PER_GAME, chaosStart } from '../lib/scoring';
 import { playerKey, saveName, savedName, socket } from '../lib/socket';
@@ -159,6 +159,7 @@ function Room({ state, pack, me, chat, onLeave }: RoomProps) {
           {state.phase === 'lobby' && (
             <div className="panel stack">
               <p>Comparte este link para que entren tus amigos:</p>
+              <p className="muted">⚡ Quien adivine primero en cada ronda gana +{FIRST_BONUS} pts extra.</p>
               <CopyLink roomId={state.id} />
               {isHost ? (
                 <>
@@ -297,7 +298,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
 
       {playing && myStatus !== 'guessing' && (
         <p className={myStatus === 'solved' ? 'ok' : 'fail'}>
-          {myStatus === 'solved' ? `¡Correcto! +${self?.roundPoints} pts` : 'Sin intentos'} — esperando al resto…
+          {myStatus === 'solved' ? `¡Correcto! +${self?.roundPoints} pts${firstNote(self)}` : 'Sin intentos'} — esperando al resto…
         </p>
       )}
 
@@ -312,7 +313,7 @@ function RoundView({ state, pack, me }: { state: RoomState; pack: Pack; me: stri
       {revealed && state.reveal && (
         <div className="reveal panel">
           <p className={myStatus === 'solved' ? 'ok' : 'fail'}>
-            {myStatus === 'solved' ? `¡Correcto! +${self?.roundPoints} pts` : 'No era…'}
+            {myStatus === 'solved' ? `¡Correcto! +${self?.roundPoints} pts${firstNote(self)}` : 'No era…'}
           </p>
           <h2>{state.reveal.answer}</h2>
           {state.reveal.credit && <p className="muted">{state.reveal.credit}</p>}
@@ -336,7 +337,7 @@ function Scoreboard({ state, me }: { state: RoomState; me: string }) {
             </span>
             {inRound && (
               <span className="progress" title="Progreso en la ronda">
-                {p.status === 'solved' ? `✓ +${p.roundPoints}` : p.status === 'failed' ? '✗' : '·'.repeat(p.attempt + 1)}
+                {p.status === 'solved' ? `${p.first ? '⚡' : '✓'} +${p.roundPoints}` : p.status === 'failed' ? '✗' : '·'.repeat(p.attempt + 1)}
               </span>
             )}
             <span className="score">{p.score}</span>
@@ -365,6 +366,10 @@ function CopyLink({ roomId }: { roomId: string }) {
       </button>
     </div>
   );
+}
+
+function firstNote(player: PublicPlayer | undefined) {
+  return player?.first ? ` (⚡ incluye +${FIRST_BONUS} por ser primero)` : '';
 }
 
 function ranking(players: PublicPlayer[]) {
