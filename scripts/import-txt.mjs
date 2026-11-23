@@ -2,6 +2,7 @@
 //
 // Songs format ("ases falsos.txt"): one "Title https://youtube.com/watch?v=ID" per line;
 // blank lines separate albums; an optional "#Album (year)" line names the block that follows.
+// A note after the link sets where the clip starts: "Casualidad https://... #(empieza seg 0:32)".
 //
 // Anime format ("anime latino.txt"): "Anime name https://youtube.com/watch?v=ID #Opening 2".
 // Text in parentheses is an accepted alternative name: "Saint Seiya (Los Caballeros del Zodiaco)".
@@ -37,6 +38,19 @@ const PACKS = [
     defaultStart: 0,
     sources: [{ file: 'anime latino.txt', kind: 'anime' }],
   },
+  {
+    out: 'miranda.json',
+    meta: {
+      id: 'miranda',
+      name: 'Miranda!',
+      description: 'Del Es Mentira al Bailar o Morir',
+      answerLabel: 'canción',
+      guessPlaceholder: 'Escribe el nombre de la canción…',
+    },
+    defaultStart: 30,
+    // A single-band pack: a "Proyecto: Miranda!" hint would give nothing away.
+    sources: [{ file: 'miranda.txt', kind: 'songs', band: 'Miranda!', bandHint: false }],
+  },
 ];
 
 const root = new URL('../', import.meta.url);
@@ -61,7 +75,16 @@ async function readLines(file) {
   return (await readFile(new URL(file, root), 'utf8')).split(/\r?\n/);
 }
 
-async function parseSongs({ file, band }) {
+/** "#(empieza seg 0:32)" or "#empieza seg 45" after a link -> 32 / 45; null when there is no such note. */
+function startFromNote(note) {
+  if (!note) return null;
+  const clock = note.match(/(\d+):(\d{1,2})/);
+  if (clock) return Number(clock[1]) * 60 + Number(clock[2]);
+  const secs = note.match(/(\d+)/);
+  return secs ? Number(secs[1]) : null;
+}
+
+async function parseSongs({ file, band, bandHint = true }) {
   const entries = [];
   let album = null;
   let blockStarted = false;
@@ -74,25 +97,27 @@ async function parseSongs({ file, band }) {
       continue;
     }
     if (line.startsWith('#')) {
-      album = line.slice(1).trim();
+      // "Es Mentira - 2002" -> "Es Mentira (2002)": filters drop a trailing number ("Opening 2"), not a bracketed one.
+      album = line.slice(1).trim().replace(/\s+-\s+(\d{4})$/, ' ($1)');
       continue;
     }
-    const m = line.match(/^(.*?)\s+(https?:\/\/\S+)$/);
+    const m = line.match(/^(.*?)\s+(https?:\/\/\S+)\s*(?:#\s*(.*))?$/);
     if (!m) {
       console.warn(`Línea ignorada en ${file}: ${line}`);
       continue;
     }
     blockStarted = true;
     const answer = m[1].trim();
-    const hints = [{ label: 'Proyecto', value: band }];
+    const hints = bandHint ? [{ label: 'Proyecto', value: band }] : [];
     if (album) hints.push({ label: 'Disco', value: album });
     entries.push({
       id: slug(`${band}-${answer}`),
       answer,
       aliases: [],
       youtubeId: videoId(m[2]),
+      start: startFromNote(m[3]),
       hints,
-      credit: album ? `${band} — ${album}` : band,
+      credit: album ? `${band} - ${album}` : band,
     });
   }
   return entries;
@@ -144,7 +169,7 @@ function animeHints(e) {
   const main = e.answer.replace(/\s*\(.*\)$/, '');
   e.hints = e.kind ? [{ label: 'Tipo', value: e.kind }] : [];
   e.hints.push({ label: 'Nombre', value: shapeHint(main) });
-  e.credit = e.kind ? `${main} — ${e.kind}` : main;
+  e.credit = e.kind ? `${main} - ${e.kind}` : main;
 }
 
 /** A "Nombre" hint edited by hand in the JSON (e.g. "D_____ B___ _" to hide the Z) survives while the answer is the same. */
@@ -183,7 +208,8 @@ for (const pack of PACKS) {
       answer: e.answer,
       aliases: prev?.aliases?.length ? prev.aliases : e.aliases,
       youtubeId: e.youtubeId,
-      start: prev?.start ?? pack.defaultStart,
+      // A second written in the .txt wins; otherwise keep the one edited in the JSON.
+      start: e.start ?? prev?.start ?? pack.defaultStart,
       hints: keepEditedName(e.hints, prev, e.answer),
       credit: e.credit,
     };

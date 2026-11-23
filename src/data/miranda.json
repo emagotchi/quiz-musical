@@ -1,0 +1,1353 @@
+{
+  "id": "miranda",
+  "name": "Miranda!",
+  "description": "Del Es Mentira al Bailar o Morir",
+  "answerLabel": "canción",
+  "guessPlaceholder": "Escribe el nombre de la canción…",
+  "tracks": [
+    {
+      "id": "miranda-bailarina",
+      "answer": "Bailarina",
+      "aliases": [],
+      "youtubeId": "GOB8aZokkKc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-horoscopo",
+      "answer": "Horóscopo",
+      "aliases": [],
+      "youtubeId": "ObwEGWm77hA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-romix",
+      "answer": "Romix",
+      "aliases": [],
+      "youtubeId": "Kfpn6TUFWrk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-iman",
+      "answer": "Imán",
+      "aliases": [],
+      "youtubeId": "oqj8TEJrw1Q",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-tu-juego",
+      "answer": "Tu Juego",
+      "aliases": [],
+      "youtubeId": "EyxAGwOmuEs",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-agua",
+      "answer": "Agua",
+      "aliases": [],
+      "youtubeId": "6yabPItXCE8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-ven",
+      "answer": "Ven",
+      "aliases": [],
+      "youtubeId": "2OFXF_5Lhkg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-mentira",
+      "answer": "Mentira",
+      "aliases": [],
+      "youtubeId": "5cnJaJt7iOk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-tiempo",
+      "answer": "Tiempo",
+      "aliases": [],
+      "youtubeId": "YJ7Paj_2uRc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-casualidad",
+      "answer": "Casualidad",
+      "aliases": [],
+      "youtubeId": "PvMadDAWyAg",
+      "start": 32,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Es Mentira (2002)"
+        }
+      ],
+      "credit": "Miranda! - Es Mentira (2002)"
+    },
+    {
+      "id": "miranda-yo-te-dire",
+      "answer": "Yo te diré",
+      "aliases": [],
+      "youtubeId": "AQRFs-JttnM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-don",
+      "answer": "Don",
+      "aliases": [],
+      "youtubeId": "32DOcN9A0TQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-quiero",
+      "answer": "Quiero",
+      "aliases": [],
+      "youtubeId": "ztHQHT9OVfM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-vuelve-a-ti",
+      "answer": "Vuelve a ti",
+      "aliases": [],
+      "youtubeId": "99NuEk50sT0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-el-profe",
+      "answer": "El Profe",
+      "aliases": [],
+      "youtubeId": "d_IDIVHROCs",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-otra-vez",
+      "answer": "Otra vez",
+      "aliases": [],
+      "youtubeId": "0dX8NFOg_z8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-tu-guru",
+      "answer": "Tu Gurú",
+      "aliases": [],
+      "youtubeId": "S-L0js6k_a4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-hoy",
+      "answer": "Hoy",
+      "aliases": [],
+      "youtubeId": "MczgISbPzWg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-el-agente",
+      "answer": "El Agente",
+      "aliases": [],
+      "youtubeId": "jOEzwGL-wNA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-navidad",
+      "answer": "Navidad",
+      "aliases": [],
+      "youtubeId": "80aJgegGSKA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-traicion",
+      "answer": "Traición",
+      "aliases": [],
+      "youtubeId": "IH85R6Kqru4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-uno-los-dos",
+      "answer": "Uno los Dos",
+      "aliases": [],
+      "youtubeId": "rd15mnol2c8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Sin Restricciones (2004)"
+        }
+      ],
+      "credit": "Miranda! - Sin Restricciones (2004)"
+    },
+    {
+      "id": "miranda-prisionero",
+      "answer": "Prisionero",
+      "aliases": [],
+      "youtubeId": "SlCLHax4Y50",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-hola",
+      "answer": "Hola",
+      "aliases": [],
+      "youtubeId": "3vsLAXD_sd0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-perfecta",
+      "answer": "Perfecta",
+      "aliases": [],
+      "youtubeId": "a3hOeU7w59o",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-enamorada",
+      "answer": "Enamorada",
+      "aliases": [],
+      "youtubeId": "vtmf5UNEovI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-nada-es-igual",
+      "answer": "Nada Es Igual",
+      "aliases": [],
+      "youtubeId": "hkfaDIhMw90",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-dejame",
+      "answer": "Dejame",
+      "aliases": [],
+      "youtubeId": "xC8zQ8l6_8Y",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-amanece-junto-a-mi",
+      "answer": "Amanece Junto a Mi",
+      "aliases": [],
+      "youtubeId": "qAdydSaV3vQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-hasta-hoy",
+      "answer": "Hasta Hoy",
+      "aliases": [],
+      "youtubeId": "e8Khf97XPLs",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-vete-de-aqui",
+      "answer": "Vete de Aquí",
+      "aliases": [],
+      "youtubeId": "AqrxRwGsFFc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-no-me-celes",
+      "answer": "No Me Celes",
+      "aliases": [],
+      "youtubeId": "k8dNWARBBXE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-te-atreviste-y-me-mori",
+      "answer": "Te Atreviste y Me Morí",
+      "aliases": [],
+      "youtubeId": "jVTcEFz8eYc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-voces",
+      "answer": "Voces",
+      "aliases": [],
+      "youtubeId": "uSbkx0IVzq0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "El Disco De Tu Corazón (2007)"
+        }
+      ],
+      "credit": "Miranda! - El Disco De Tu Corazón (2007)"
+    },
+    {
+      "id": "miranda-mentia",
+      "answer": "Mentía",
+      "aliases": [],
+      "youtubeId": "fIhyOeMGQN4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-lo-que-siento-por-ti",
+      "answer": "Lo que siento por ti",
+      "aliases": [],
+      "youtubeId": "qDt45CuXxG4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-romance-juvenil",
+      "answer": "Romance juvenil",
+      "aliases": [],
+      "youtubeId": "Ia5YhPv8RxY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-el-showcito",
+      "answer": "El showcito",
+      "aliases": [],
+      "youtubeId": "z2kQMg_HBZE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-tu-mirada",
+      "answer": "Tu mirada",
+      "aliases": [],
+      "youtubeId": "wmLGQxWapf0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-tu-misterioso-alguien",
+      "answer": "Tu Misterioso Alguien",
+      "aliases": [],
+      "youtubeId": "ETJcV3rPO_U",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-si-pudiera-volver",
+      "answer": "Si Pudiera Volver",
+      "aliases": [],
+      "youtubeId": "1jL2aLyhyaQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-no-lo-digas",
+      "answer": "No lo digas",
+      "aliases": [],
+      "youtubeId": "qTxJwKMdTaE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-entre-mis-brazos",
+      "answer": "Entre mis brazos",
+      "aliases": [],
+      "youtubeId": "JtlMz3jsZtw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-hola-probando",
+      "answer": "Hola probando",
+      "aliases": [],
+      "youtubeId": "r1uZNUv_AZg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Miranda es imposible! (2009)"
+        }
+      ],
+      "credit": "Miranda! - Miranda es imposible! (2009)"
+    },
+    {
+      "id": "miranda-dice-lo-que-siente",
+      "answer": "Dice Lo Que Siente",
+      "aliases": [],
+      "youtubeId": "WLjUVheyp8M",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-ya-lo-sabia",
+      "answer": "Ya Lo Sabía",
+      "aliases": [],
+      "youtubeId": "Fsjm1QFtaJg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-a-la-distancia",
+      "answer": "A la Distancia",
+      "aliases": [],
+      "youtubeId": "dOmlBM90kQU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-ritmo-y-decepcion",
+      "answer": "Ritmo y Decepción",
+      "aliases": [],
+      "youtubeId": "c8X4wF8OOKU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-10-anos-despues",
+      "answer": "10 Años Después",
+      "aliases": [],
+      "youtubeId": "pmdW6E1-UrU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-no-pero-no",
+      "answer": "No pero No",
+      "aliases": [],
+      "youtubeId": "xuBXWvJkAXg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-cada-vez-que-decimos-adios",
+      "answer": "Cada Vez Que Decimos Adios",
+      "aliases": [],
+      "youtubeId": "XQJlc_2pUQI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-una-noche-como-hoy",
+      "answer": "Una Noche Como Hoy",
+      "aliases": [],
+      "youtubeId": "sks5m5CB-xA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-tucan",
+      "answer": "Tucán",
+      "aliases": [],
+      "youtubeId": "RXqUwKzO1SA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-puro-talento",
+      "answer": "Puro Talento",
+      "aliases": [],
+      "youtubeId": "lacN212lLlw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Magistral (2011)"
+        }
+      ],
+      "credit": "Miranda! - Magistral (2011)"
+    },
+    {
+      "id": "miranda-fantasmas",
+      "answer": "Fantasmas",
+      "aliases": [],
+      "youtubeId": "0YkKqfod4jo",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-extrano",
+      "answer": "Extraño",
+      "aliases": [],
+      "youtubeId": "gWKKNnCc-hA",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-es-por-el",
+      "answer": "Es por Él",
+      "aliases": [],
+      "youtubeId": "NiASa0qNzqc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-solo-lo-sabe-la-luna",
+      "answer": "Sólo Lo Sabe la Luna",
+      "aliases": [],
+      "youtubeId": "H5_ulF3Tvss",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-miro-la-vida-pasar",
+      "answer": "Miro la Vida Pasar",
+      "aliases": [],
+      "youtubeId": "hE42GNkUSTI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-se-mia",
+      "answer": "Sé Mía",
+      "aliases": [],
+      "youtubeId": "bjyVDEb3EOw",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-buen-dia",
+      "answer": "Buen día",
+      "aliases": [],
+      "youtubeId": "IYpzE8v71fE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-nadie-como-tu",
+      "answer": "Nadie Como Tú",
+      "aliases": [],
+      "youtubeId": "w2_g3r-oVQk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-fotos",
+      "answer": "Fotos",
+      "aliases": [],
+      "youtubeId": "XXFFHkCKYjs",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-para-olvidar-tu-amor",
+      "answer": "Para Olvidar Tu Amor",
+      "aliases": [],
+      "youtubeId": "6CaAM31rl9I",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Safari (2014)"
+        }
+      ],
+      "credit": "Miranda! - Safari (2014)"
+    },
+    {
+      "id": "miranda-743",
+      "answer": "743",
+      "aliases": [],
+      "youtubeId": "J0MQD-LLLK0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-calido-y-rojo",
+      "answer": "Cálido y Rojo",
+      "aliases": [],
+      "youtubeId": "hDunyOv3YnE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-lejos-de-mi-alcance",
+      "answer": "Lejos de Mi Alcance",
+      "aliases": [],
+      "youtubeId": "-_7Mgy2wlTE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-no",
+      "answer": "No",
+      "aliases": [],
+      "youtubeId": "PiTIs-ogqmk",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-ahora-que-soy-cantante",
+      "answer": "Ahora Que Soy Cantante",
+      "aliases": [],
+      "youtubeId": "gY4aXuBkNG4",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-amante-amigo",
+      "answer": "Amante Amigo",
+      "aliases": [],
+      "youtubeId": "JXXo0GHJ6ZM",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-enero",
+      "answer": "Enero",
+      "aliases": [],
+      "youtubeId": "6MH6ei4sasc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-en-esta-noche",
+      "answer": "En Esta Noche",
+      "aliases": [],
+      "youtubeId": "-cSClwyMqcg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-tu-hombre",
+      "answer": "Tu Hombre",
+      "aliases": [],
+      "youtubeId": "E0SfIozXS3A",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-tu-padre",
+      "answer": "Tu Padre",
+      "aliases": [],
+      "youtubeId": "5Z8XcLBREaI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-quiero-vivir-a-tu-lado",
+      "answer": "Quiero Vivir a Tu Lado",
+      "aliases": [],
+      "youtubeId": "2Uo20U08nT0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-mala-senal",
+      "answer": "Mala Señal",
+      "aliases": [],
+      "youtubeId": "YhkKyC1nR2s",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Fuerte (2017)"
+        }
+      ],
+      "credit": "Miranda! - Fuerte (2017)"
+    },
+    {
+      "id": "miranda-por-amar-al-amor",
+      "answer": "Por Amar al Amor",
+      "aliases": [],
+      "youtubeId": "LaHqclhfKHU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-caia-la-noche",
+      "answer": "Caía la Noche",
+      "aliases": [],
+      "youtubeId": "K6z8owFh7lc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-me-gustas-tanto",
+      "answer": "Me Gustas Tanto",
+      "aliases": [],
+      "youtubeId": "sqikoRiW7y0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-entre-las-dos",
+      "answer": "Entre las Dos",
+      "aliases": [],
+      "youtubeId": "Y0IGGXes2WQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-luna-de-papel",
+      "answer": "Luna de Papel",
+      "aliases": [],
+      "youtubeId": "drVDrrdrElc",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-no-es-lo-que-parece",
+      "answer": "No Es Lo Que Parece",
+      "aliases": [],
+      "youtubeId": "JgI36nsmcFg",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-un-tiempo",
+      "answer": "Un tiempo",
+      "aliases": [],
+      "youtubeId": "U-E304YjVfI",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-en-el-bar",
+      "answer": "En el Bar",
+      "aliases": [],
+      "youtubeId": "SrGOsYeQLdY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-que-no-pare",
+      "answer": "Que no Pare",
+      "aliases": [],
+      "youtubeId": "gl76MEA_k2o",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-casi-feliz",
+      "answer": "Casi Feliz",
+      "aliases": [],
+      "youtubeId": "KEVBhZfugNE",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "Souvenir (2021)"
+        }
+      ],
+      "credit": "Miranda! - Souvenir (2021)"
+    },
+    {
+      "id": "miranda-bailar-o-morir",
+      "answer": "BAILAR O MORIR",
+      "aliases": [],
+      "youtubeId": "-ie5USBs4uY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-senora",
+      "answer": "SEÑORA",
+      "aliases": [],
+      "youtubeId": "RcUvo62blBY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-en-italia",
+      "answer": "EN ITALIA",
+      "aliases": [],
+      "youtubeId": "NPHAbKe9spU",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-migajas",
+      "answer": "MIGAJAS",
+      "aliases": [],
+      "youtubeId": "8U1_ekYllpY",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-adonde",
+      "answer": "ADONDE",
+      "aliases": [],
+      "youtubeId": "4ZiD4Shzxy8",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-hiperlove",
+      "answer": "HIPERLOVE",
+      "aliases": [],
+      "youtubeId": "PQSRWckZc5s",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-ganar",
+      "answer": "GANAR",
+      "aliases": [],
+      "youtubeId": "sRIM8aqsFmQ",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-piel",
+      "answer": "PIEL",
+      "aliases": [],
+      "youtubeId": "8Ia4TC_Ea_0",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-helecho",
+      "answer": "HELECHO",
+      "aliases": [],
+      "youtubeId": "POQ3XMRAU3U",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    },
+    {
+      "id": "miranda-vivo-del-pop",
+      "answer": "VIVO DEL POP",
+      "aliases": [],
+      "youtubeId": "uoen6uTcp2U",
+      "start": 30,
+      "hints": [
+        {
+          "label": "Disco",
+          "value": "BAILAR O MORIR (2026)"
+        }
+      ],
+      "credit": "Miranda! - BAILAR O MORIR (2026)"
+    }
+  ]
+}
